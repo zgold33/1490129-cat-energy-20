@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Сергей Золотухин](https://up.htmlacademy.ru/adaptive/20/user/1490129).
-* Наставник: `Неизвестно`.
+* Наставник: [Максим Иванов] (https://htmlacademy.ru/profile/id342945).
 
 ---
 
