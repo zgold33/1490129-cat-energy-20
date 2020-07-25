@@ -1,0 +1,42 @@
+.program-selection {
+  width: 320px;
+  margin: 0 auto;
+  background: url("../img/index-background-mobile1.png") no-repeat;
+  padding: 0 20px;
+}
+
+.program-selection__title {
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
+  padding-top: 27px;
+  text-align: center;
+  color: $color-title-light;
+  font-family: $title-font;
+  font-weight: normal;
+  @include text(36px, 36px)
+}
+
+.program-selection__subtitle {
+  text-align: center;
+  margin-bottom: 29px;
+  color: $color-title-light;
+  font-family: $title-font;
+  font-weight: normal;
+  text-transform: uppercase;
+  @include text(14px, 14px)
+}
+
+.program-selection__link {
+  display: flex;
+  width: 100%;
+  min-height: 40px;
+  background-color: $color-button;
+  justify-content: center;
+  align-items: center;
+  color: $color-title-light;
+  font-family: $title-font;
+  font-weight: normal;
+  text-transform: uppercase;
+  @include text(14px, 18px);
+}

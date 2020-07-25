@@ -1,0 +1,42 @@
+.show-more-products__title {
+  margin-top: 80px;
+  font-family: $title-font;
+  font-weight: normal;
+  text-align: center;
+
+  @include text(16px, 20px);
+  padding: 0 20px;
+  position: relative;
+
+  &::before {
+    @include pseudo;
+    width: 30px;
+    height: 30px;
+    bottom: 40px;
+    left: 125px;
+    background: url("../img/big-plus.svg");
+  }
+}
+
+.show-more-products__subtitle {
+  font-weight: normal;
+  text-align: center;
+
+  @include text(12px, 16px);
+  padding: 0 20px;
+  margin-bottom: 21px;
+}
+
+.show-more-products__link {
+  display: flex;
+  font-family: $title-font;
+  background-color: $color-bg;
+  min-height: 40px;
+  justify-content: center;
+  align-items: center;
+  color: $color-devobs;
+
+  @include text(16px, 0);
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
