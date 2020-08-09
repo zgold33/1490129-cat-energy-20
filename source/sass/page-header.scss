@@ -1,15 +1,34 @@
-.page-header {
-  width: 320px;
-  margin: 0 auto;
-}
-
 .page-header__wrapper {
   display: flex;
   padding-top: 11px;
   padding-bottom: 0;
-  padding-left: 20px;
-  padding-right: 20px;
   justify-content: space-between;
   align-items: center;
   background-color: $color-title-light;
+  margin-bottom: 14px;
+}
+
+.page-header {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.main-nav__toggle {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.page-header__logo {
+  @media (min-width: $tablet-width) {
+    width: 174px;
+    height: 51px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 202px;
+    height: 59px;
+  }
 }

@@ -1,8 +1,19 @@
 .program-selection {
-  width: 320px;
-  margin: 0 auto;
-  background: url("../img/index-background-mobile1.png") no-repeat;
-  padding: 0 20px;
+  background: url("../img/index-background-mobile1.png");
+  background-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) {
+    background: none;
+    background-image: url("../img/index-can-tablet1.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/index-can-desktop1.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+  }
 }
 
 .program-selection__title {
@@ -14,7 +25,14 @@
   color: $color-title-light;
   font-family: $title-font;
   font-weight: normal;
-  @include text(36px, 36px)
+
+  @include text(36px, 36px);
+
+  @media (min-width: $tablet-width) {
+    color: $color-title-dark;
+    text-align: start;
+    padding-left: 87px;
+  }
 }
 
 .program-selection__subtitle {
@@ -24,19 +42,44 @@
   font-family: $title-font;
   font-weight: normal;
   text-transform: uppercase;
-  @include text(14px, 14px)
+
+  @include text(14px, 14px);
+
+  @media (min-width: $tablet-width) {
+    color: $color-title-dark;
+    text-align: start;
+    padding-left: 87px;
+  }
 }
 
-.program-selection__link {
-  display: flex;
-  width: 100%;
-  min-height: 40px;
-  background-color: $color-button;
-  justify-content: center;
-  align-items: center;
-  color: $color-title-light;
-  font-family: $title-font;
-  font-weight: normal;
-  text-transform: uppercase;
-  @include text(14px, 18px);
+.program-selection__wrapper {
+  @media (min-width: $tablet-width) {
+    min-height: 972px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 670px;
+  }
+}
+
+.program-selection__image {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.button {
+  @media (min-width: $tablet-width) {
+    align-items: center;
+    max-width: 244px;
+    max-height: 44px;
+    margin-left: 87px;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-items: center;
+    max-width: 244px;
+    max-height: 44px;
+    margin-left: 87px;
+  }
 }

@@ -1,19 +1,24 @@
-.variants {
-  width: 320px;
-  margin: 0 auto;
-}
-
 .variants__wrapper {
-  padding: 0 20px;
+  margin-bottom: 27px;
 }
 
 .variants__list {
   list-style: none;
   margin: 0;
   padding: 0;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .variants__item {
-  padding: 0 20px;
+  padding: 30px 20px 18px 20px;
   margin-top: 20px;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }

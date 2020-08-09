@@ -27,16 +27,7 @@
   margin-bottom: 21px;
 }
 
-.show-more-products__link {
-  display: flex;
-  font-family: $title-font;
+.button--theme--gray {
   background-color: $color-bg;
-  min-height: 40px;
-  justify-content: center;
-  align-items: center;
   color: $color-devobs;
-
-  @include text(16px, 0);
-  text-transform: uppercase;
-  margin-bottom: 25px;
 }

@@ -46,17 +46,3 @@
   text-align: right;
   margin: 0;
 }
-
-.item-card__order {
-  display: flex;
-  background-color: $color-button;
-  font-family: $title-font;
-  min-height: 40px;
-  justify-content: center;
-  align-items: center;
-  color: $color-title-light;
-
-  @include text(16px, 0);
-  text-transform: uppercase;
-  margin-bottom: 14px;
-}

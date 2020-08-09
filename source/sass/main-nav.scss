@@ -1,6 +1,11 @@
-.main-nav__wrapper {
-  width: 320px;
-  margin: 0 auto;
+.site-list {
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .site-list__item {
@@ -9,6 +14,19 @@
   list-style: none;
   text-align: center;
   border-top: 1px solid $color-light-border;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+    margin-right: 34px;
+
+    &:nth-child(2) {
+      margin-right: 36px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .site-list__item-link {
