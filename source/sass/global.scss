@@ -7,14 +7,13 @@ body {
 }
 
 .container {
-  max-width: 320px;
   margin-left: auto;
   margin-right: auto;
   padding: 0 20px;
 
   @media (min-width: $tablet-width) {
     padding: 0 30px;
-    min-width: 768px;
+    max-width: 768px;
   }
 
   @media (min-width: $desktop-width) {

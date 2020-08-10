@@ -25,6 +25,7 @@
     grid-template-columns: 246px 246px;
     grid-template-rows: 280px 280px;
     grid-row-gap: 37px;
+    justify-content: space-between;
   }
 
   @media (min-width: $desktop-width) {
@@ -37,6 +38,7 @@
 .advantages__item {
   display: flex;
   margin-bottom: 20px;
+  counter-increment: section; //не работает
 
   @include text(14px, 18px);
 
@@ -60,5 +62,14 @@
 
   &--good-changes::before {
     background: url("../img/advantage-libra.png") no-repeat;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+
+    ::after {
+      content: counter(section); //не работает
+    }
   }
 }
