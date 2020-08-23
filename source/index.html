@@ -14,11 +14,11 @@
       <a class="page-header__logo">
         <img src="img/logo-mobile2.svg" width="190" height="38" alt="Логотип сайта Кэт Энержи">
       </a>
-      <button class="main-nav__toggle" type="button">
+      <button class="page-header__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
     </div>
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--closed">
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--active">
@@ -54,7 +54,8 @@
         <a class="program-selection__image">
           <img src="img/chicken-box.png" width="280" height="270" alt="Изображение питания для котов">
         </a>
-        <a class="program-selection__link button button--adaptive" href="form.html" aria-label="Кликните дял подбора программы">Подобрать
+        <a class="program-selection__link button button--adaptive" href="form.html"
+          aria-label="Кликните дял подбора программы">Подобрать
           программу</a>
       </div>
     </section>
@@ -100,10 +101,49 @@
         </ul>
       </div>
     </section>
+    <section class="example container">
+      <div class="example__wrapper">
+        <div class="example__content">
+          <h2 class="example__title">Живой пример</h2>
+          <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat
+            Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему
+            спит по 16 часов в день.
+          </p>
+          <div class="example__stats">
+            <dl class="example__row">
+              <div class="example__column">
+                <dt class="example__description">снижение веса</dt>
+                <dd class="example__value">5 КГ</dd>
+              </div>
+              <div class="example__column">
+                <dt class="example__description">затрачено времени</dt>
+                <dd class="example__value">60 ДНЕЙ</dd>
+              </div>
+            </dl>
+            <p class="example__cost">Затраты на питание: <span class="example__price">15 000 РУБ.</span> </p>
+          </div>
+        </div>
+        <div class="example__image slider">
+        </div>
+      </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
-    <div class="footer__wrapper container">
+    <section class="footer__contacts contacts ">
+      <h2 class="visually-hidden">Контакты</h2>
+      <div class="contacts__wrapper container">
+        <div class="contacts__text">
+          <h3 class="contacts__title">Приглашаем<br>к сотрудничеству<br>дилеров!</h3>
+          <p class="contacts__addres">ул. Большая<br>Конюшенная, д. 19/8<br><span>Санкт-Петербург</span></p>
+        </div>
+      </div>
+      <div class="contacts__map">
+        <h2 class="visually-hidden">Расположение магазина на карте</h2>
+      </div>
+    </section>
+    <section class="footer__wrapper container">
       <a class="footer__logo">
         <img src="img/footer-logo.svg" alt="Логотип Cat Energy" width="128" height="24">
       </a>
@@ -153,7 +193,8 @@
           </svg>
         </a>
       </div>
-    </div>
+    </section>
   </footer>
 </body>
+
 </html>

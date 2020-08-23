@@ -1,6 +1,12 @@
 .program-selection {
   background: url("../img/index-background-mobile1.png");
   background-repeat: no-repeat;
+  position: relative;
+  background-color: $color-button;
+  background-size: cover;
+  background-position: center;
+  min-width: 320px;
+  min-height: 305px;
 
   @media (min-width: $tablet-width) {
     background: none;
@@ -13,6 +19,8 @@
     background-image: url("../img/index-can-desktop1.png");
     background-repeat: no-repeat;
     background-position: right top;
+    min-width: 720px;
+    min-height: 696px;
   }
 }
 
