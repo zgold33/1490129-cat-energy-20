@@ -1,5 +1,9 @@
 .additional-goods__wrapper {
-  //outline: solid orange;
+  outline: solid orange;
+
+  @include desktop {
+    display: flex;
+  }
 }
 
 .additional-goods__title-wrapper {
@@ -36,6 +40,7 @@
 }
 
 .additional-goods__list {
+  outline: solid green;
   padding-left: 0;
   list-style: none;
   margin-bottom: 39px;

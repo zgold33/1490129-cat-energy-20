@@ -6,9 +6,42 @@
   align-items: center;
   background-color: $color-title-light;
   margin-bottom: 14px;
+
+  ::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 277px;
+    right: 0;
+    width: 100%;
+    min-height: 305px;
+    background: url("../img/index-background-mobile1.png") no-repeat;
+    background-color: $color-button;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+
+    @include tablets {
+      display: none;
+    }
+
+    @include desktop {
+      content: "";
+      position: absolute;
+      display: block;
+      background-image: url("../img/index-background-desktop1") no-repeat;
+      background-color: $color-button;
+      top: 0;
+      width: 50%;
+      min-height: 696px;
+      z-index: -1;
+    }
+  }
 }
 
 .page-header {
+  outline: orange solid 1px;
+
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
@@ -32,3 +65,43 @@
     height: 59px;
   }
 }
+
+/*
+.choose__title {
+  font-family: $title-font;
+  margin-top: 0;
+  font-weight: normal;
+  padding-left: 70px;
+  text-transform: uppercase;
+  position: relative;
+
+  @include text(24px, 37px);
+
+  &::before {
+    @include pseudo;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $color-button;
+  }
+
+  &--slim::after {
+    @include pseudo;
+    top: 0;
+    left: 7px;
+    width: 36px;
+    height: 50px;
+    background: url("../img/icon-cat-slim.svg") no-repeat;
+  }
+
+  &--pro::after {
+    @include pseudo;
+    top: 10px;
+    left: -10px;
+    width: 67px;
+    height: 28px;
+    background: url("../img/icon-cat-pro.svg") no-repeat;
+  }
+} */

@@ -1,0 +1,48 @@
+.program__wrapper {
+  margin-bottom: 40px;
+
+  @include tablets {
+    margin-bottom: 67px;
+  }
+}
+
+.program__title {
+  margin: 0;
+  margin-bottom: 10px;
+  padding-top: 19px;
+  padding-bottom: 26px;
+  font-family: $title-font;
+  font-weight: normal;
+  color: $color-title-dark;
+
+  @include text(36px, 36px);
+
+  @include tablets {
+    @include text(60px, 60px);
+    padding-top: 52px;
+    margin-bottom: 28px;
+  }
+
+  @include desktop {
+    padding-top: 64px;
+    margin-bottom: 31px;
+  }
+}
+
+.program__subtitle {
+  margin: 0;
+  font-family: $title-font;
+  font-weight: normal;
+  color: $color-title-dark;
+  text-transform: uppercase;
+
+  @include text(14px, 18px);
+
+  @include tablets {
+    @include text(20px, 30px);
+  }
+
+  @include desktop {
+    padding: 0;
+  }
+}
