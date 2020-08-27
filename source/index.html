@@ -3,21 +3,26 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./css/style.css">
   <title>HTML academy: Cat energy. Main page</title>
 </head>
 
 <body class="page__body">
-  <header class="page-header">
+  <header class="page-header container">
     <div class="page-header__wrapper">
       <a class="page-header__logo">
-        <img src="img/logo-mobile2.svg" width="190" height="38" alt="Логотип сайта Кэт Энержи">
+        <picture>
+          <source media="(min-width: 1220px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img src="img/logo-mobile.svg" width="190" height="38" alt="Логотип сайта Кэт Энержи">
+        </picture>
       </a>
-      <button class="main-nav__toggle" type="button">
+      <button class="page-header__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
     </div>
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--closed">
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--active">
@@ -42,22 +47,27 @@
 
   <main class="page-main">
     <h1 class="visually-hidden">Интернет-магазин функционального питания для котов</h1>
-    <section class="program-selection">
+    <section class="program-selection container">
       <div class="program-selection__wrapper">
         <h2 class="program-selection__title">
-          Функциональное питание для котов
+          Функциональное</br> питание для котов
         </h2>
         <p class="program-selection__subtitle">
           Занялся собой? Займись котом!
         </p>
-        <a class="program-selection__image">
-          <img src="img/chicken-box.png" width="280" height="270" alt="Изображение питания для котов">
-        </a>
-        <a class="program-selection__link" href="form.html" aria-label="Кликните дял подбора программы">Подобрать
+        <picture>
+          <source srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x" media="(min-width: 1220px)">
+          <source srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x" media="(min-width: 768px)">
+          <img class="program-selection__image" src="img/index-can-mobile@1x.png"
+            srcset="img/index-can-mobile@2x.png 2x" alt="Упаковка Cat Energy Pro со вкусом курицы" width="280"
+            height="270">
+        </picture>
+        <a class="program-selection__link button button--adaptive" href="form.html"
+          aria-label="Кликните дял подбора программы">Подобрать
           программу</a>
       </div>
     </section>
-    <section class="variants">
+    <section class="variants container">
       <h2 class="visually-hidden">Варианты программы питания</h2>
       <div class="variants__wrapper">
         <ul class="variants__list">
@@ -80,7 +90,7 @@
         </ul>
       </div>
     </section>
-    <section class="advantages">
+    <section class="advantages container">
       <div class="advantages__wrapper">
         <h2 class="advantages__title">Как это работает</h2>
         <ul class="advantages__list">
@@ -99,10 +109,49 @@
         </ul>
       </div>
     </section>
+    <section class="example container">
+      <div class="example__wrapper">
+        <div class="example__content">
+          <h2 class="example__title">Живой пример</h2>
+          <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat
+            Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему
+            спит по 16 часов в день.
+          </p>
+          <div class="example__stats">
+            <dl class="example__row">
+              <div class="example__column">
+                <dt class="example__description">снижение веса</dt>
+                <dd class="example__value">5 КГ</dd>
+              </div>
+              <div class="example__column">
+                <dt class="example__description">затрачено времени</dt>
+                <dd class="example__value">60 ДНЕЙ</dd>
+              </div>
+            </dl>
+            <p class="example__cost">Затраты на питание: <span class="example__price">15 000 РУБ.</span> </p>
+          </div>
+        </div>
+        <div class="example__image slider">
+        </div>
+      </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
-    <div class="footer__wrapper">
+    <section class="footer__contacts contacts ">
+      <h2 class="visually-hidden">Контакты</h2>
+      <div class="contacts__wrapper container">
+        <div class="contacts__text">
+          <h3 class="contacts__title">Приглашаем<br>к сотрудничеству<br>дилеров!</h3>
+          <p class="contacts__addres">ул. Большая<br>Конюшенная, д. 19/8<br><span>Санкт-Петербург</span></p>
+        </div>
+      </div>
+      <div id="map" class="map">
+        <h2 class="visually-hidden">Расположение магазина на карте</h2>
+      </div>
+    </section>
+    <section class="footer__wrapper container">
       <a class="footer__logo">
         <img src="img/footer-logo.svg" alt="Логотип Cat Energy" width="128" height="24">
       </a>
@@ -152,7 +201,13 @@
           </svg>
         </a>
       </div>
-    </div>
+    </section>
   </footer>
+
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
+  </script>
+  <script src="js/main.js" type="text/javascript"></script>
+
 </body>
+
 </html>

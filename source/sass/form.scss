@@ -1,0 +1,543 @@
+.form {
+  @include tablets {
+    padding-bottom: 69px;
+  }
+
+  @include desktop {
+    padding-bottom: 81px;
+  }
+}
+
+.form__grid {
+  margin: 0 0 41px 0;
+
+  &--position--row {
+    margin-bottom: 29px;
+  }
+
+  @include tablets {
+    padding: 0 0 0 0;
+    margin: 0 0 19px 0;
+
+    &--position--row {
+      margin-bottom: 0;
+    }
+  }
+
+  @include desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 80px;
+    max-width: $desktop-width;
+    margin: 0 auto;
+  }
+}
+
+.form__fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+
+  &--style--line {
+    border-bottom: 1px solid $color-border;
+    border-top: 1px solid $color-border;
+    padding: 20px 0 22px 0;
+    margin: 25px 0 0 0;
+
+    @include tablets {
+      border: none;
+      margin: 0 0 0 0;
+      padding: 0 0 0 0;
+    }
+
+    @include desktop {
+      border: none;
+      margin: 0 0 70px 0;
+      padding: 0 0 0 0;
+    }
+  }
+
+
+  &--position--row {
+    @include desktop {
+      grid-column: span 2;
+      margin: 0 40px 0 0;
+      padding: 0 0 0 0;
+    }
+  }
+}
+
+.form__container {
+  display: grid;
+  padding: 0 20px;
+  grid-row-gap: 15px;
+
+  @include tablets {
+    padding: 0 66.5px 0 69px;
+    grid-row-gap: 20px;
+  }
+
+  @include desktop {
+    max-width: $desktop-width;
+    margin: 0 auto;
+    padding: 0 0 0 40px;
+  }
+
+  &--cat {
+    @include tablets {
+      margin-bottom: 72px;
+    }
+
+    @include desktop {
+      margin-bottom: 0;
+    }
+  }
+
+  &--checkbox {
+    margin-bottom: 8px;
+    margin-top: 4px;
+
+    @include tablets {
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 60px;
+      grid-row-gap: 32px;
+      margin-bottom: 53px;
+    }
+
+    @include desktop {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-column-gap: 80px;
+      margin-top: 2px;
+      margin-bottom: 59px;
+    }
+  }
+
+  &--contacts {
+    @include tablets {
+      margin-bottom: 67px;
+    }
+
+    @include desktop {
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 80px;
+    }
+  }
+
+  &--radio {
+    @include tablets {
+      border: 1px solid $color-border;
+      margin: 0 68px 75px 71px;
+      grid-row-gap: 13px;
+      padding: 25px 25px 25px 26px;
+    }
+
+    @include desktop {
+      margin: 0 40px 0 0;
+      padding: 25px 25px 22px 26px;
+    }
+  }
+
+  &--about {
+    @include tablets {
+      margin-bottom: 65px;
+    }
+
+    @include desktop {
+      margin-bottom: 69px;
+    }
+  }
+
+  &--submit {
+    margin-bottom: 26px;
+
+    @include tablets {
+      margin-bottom: 0;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 60px;
+    }
+
+    @include desktop {
+      grid-column-gap: 39px;
+    }
+  }
+}
+
+.form__wrap {
+  display: flex;
+  align-content: center;
+  position: relative;
+}
+
+.form__label {
+  padding: 13px 0 6px 0;
+  margin-right: 15px;
+  font-family: $title-font;
+  font-weight: normal;
+  color: $color-devobs;
+  text-transform: uppercase;
+  position: relative;
+
+  @include text(16px, 18px);
+
+  &--email {
+    margin-right: 10px;
+  }
+
+  &--phone {
+    margin-right: 10px;
+  }
+
+
+  @include tablets {
+    @include text(20px, 30px);
+    padding: 10px 0 0 0;
+    margin-right: 20px;
+
+    &--email {
+      margin-right: 21px;
+    }
+
+    &--phone {
+      margin-right: 15px;
+    }
+  }
+
+  &--style--check {
+    padding: 4px 0 5px 45px;
+    color: $color-title-dark;
+
+    &::before {
+      @include pseudo;
+      width: 30px;
+      height: 30px;
+      top: 0;
+      left: 0;
+      border: 1px solid $color-border-hover;
+    }
+
+    @include tablets {
+      padding: 3px 0 6px 59px;
+
+      &::before {
+        @include pseudo;
+        width: 40px;
+        height: 40px;
+        top: -4px;
+        left: 0;
+        border: 1px solid $color-border-hover;
+      }
+    }
+  }
+
+  &--style--radio {
+    padding: 5px 5px 5px 45px;
+
+    color: $color-card-title;
+
+    &::before {
+      @include pseudo;
+      width: 30px;
+      height: 30px;
+      top: 0;
+      left: 0;
+      border: 1px solid $color-border-hover;
+      border-radius: 50%;
+    }
+
+    @include tablets {
+      padding: 5px 10px 5px 61px;
+
+      &::before {
+        @include pseudo;
+        width: 40px;
+        height: 40px;
+        top: 0;
+        left: 0;
+        border: 1px solid $color-border-hover;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.form__input {
+  padding: 16px 10px 10px 14px;
+  flex-grow: 1;
+
+  &--theme--light {
+    border: 1px solid $color-border;
+
+    &:hover {
+      border-color: $color-border-hover;
+    }
+  }
+
+  &--contacts {
+    border: 1px solid $color-border-hover;
+  }
+
+  &--contacts:active {
+    border-color: $color-border-active;
+  }
+
+  &--contacts:active + .form__icon,
+  &--contacts:focus + .form__icon {
+    fill: $color-button;
+  }
+
+  &--theme--light:focus:invalid {
+    outline: none;
+    border-color: $color-border-error;
+  }
+
+  &--contacts:focus:invalid {
+    outline: none;
+    border-color: $color-border-error;
+  }
+
+  &--contacts:focus:invalid + .form__icon {
+    fill: $color-border-error;
+  }
+
+  @include tablets {
+    @include text(20px, 30px);
+    padding: 12px 8px 8px 17px;
+
+    &--contacts {
+      padding: 12px 8px 8px 18px;
+    }
+  }
+
+  &::placeholder {
+    font-family: $title-font;
+    font-weight: normal;
+    color: $color-devobs;
+    text-transform: uppercase;
+
+    @include text(16px, 18px);
+
+    @include tablets {
+      @include text(20px, 30px);
+    }
+  }
+
+  &--textarea {
+    min-height: 150px;
+    padding: 13px 10px 10px 14px;
+
+    @include tablets {
+      min-height: 174px;
+      padding: 11px 10px 10px 19px;
+    }
+  }
+
+  &--textarea:hover {
+    border-color: $color-border-hover;
+  }
+
+  &--textarea:active {
+    border-color: $color-border-active;
+  }
+
+  &--style--radio {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+  }
+
+
+  &--style--radio:hover:not(:disabled) + .form__label--style--radio::before {
+    border: 1px solid $color-checkbox-active;
+  }
+
+  &--style--radio:checked:not(:disabled) + .form__label--style--radio::after {
+    @include pseudo;
+    width: 13.5px;
+    height: 13.5px;
+    top: 8px;
+    left: 8px;
+    background-color: $color-button;
+    border-radius: 50%;
+  }
+
+  &--style--radio:active + .form__label--style--radio {
+    opacity: 0.3;
+  }
+
+  &--style--radio:disabled + .form__label--style--radio {
+    opacity: 0.3;
+  }
+
+  @include tablets {
+    &--style--radio:checked:not(:disabled) + .form__label--style--radio::after {
+      @include pseudo;
+      width: 18px;
+      height: 18px;
+      top: 11px;
+      left: 11px;
+      background-color: $color-button;
+      border-radius: 50%;
+    }
+  }
+
+  &--style--check {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+  }
+
+  &--style--check:hover:not(:disabled) + .form__label--style--check::before {
+    border: 1px solid $color-checkbox-active;
+  }
+
+  &--style--check:checked + .form__label--style--check::after {
+    @include pseudo;
+    width: 18px;
+    height: 14px;
+    top: 8px;
+    left: 6px;
+    background-image: url("../img/check.svg");
+  }
+
+  &--style--check:active + .form__label--style--check {
+    opacity: 0.3;
+  }
+
+  &--style--check:disabled + .form__label--style--check {
+    opacity: 0.3;
+  }
+
+  @include tablets {
+    &--style--check:checked + .form__label--style--check::after {
+      @include pseudo;
+      width: 18px;
+      height: 14px;
+      top: 10px;
+      left: 12px;
+      background-image: url("../img/check.svg");
+    }
+  }
+}
+
+.form__legend-title {
+  border-top: 2px solid $color-button;
+  margin-bottom: 14px;
+
+  &--position {
+    margin-bottom: 55px;
+  }
+
+  @include tablets {
+    margin-bottom: 51px;
+
+    &--additional {
+      margin-bottom: 33px;
+    }
+  }
+
+  @include desktop {
+    margin-top: 23px;
+    margin-bottom: 48px;
+
+    &--additional {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.form__legend {
+  position: relative;
+  display: inline-block;
+  background: $color-title-light;
+
+  margin: 0 79px 0 -20px;
+  transform: translateY(-61%);
+  padding: 0 20px;
+  font-family: $title-font;
+  font-weight: normal;
+  color: $color-title-dark;
+
+  @include text(24px, 26px);
+
+  &--position {
+    transform: translateY(-37%);
+  }
+
+  @include tablets {
+    @include text(36px, 36px);
+    margin: 0 0 0 0;
+    padding: 0 46px 0 39px;
+
+    &--position {
+      transform: translateY(-67%);
+    }
+  }
+
+  @include desktop {
+    transform: translateY(-70%);
+
+    @include text(36px, 36px);
+    padding: 0 40px;
+    margin: 0 -40px;
+  }
+}
+
+.form__text {
+  margin: 6px 0 6px 0;
+  text-align: center;
+  color: $color-title-dark;
+
+  @include text(14px, 16px);
+
+  @include tablets {
+    margin: 0;
+    text-align: left;
+
+    @include text(16px, 16px);
+    align-self: center;
+    margin-bottom: 2px;
+  }
+
+  @include desktop {
+    margin-bottom: 0;
+  }
+}
+
+.form__icon {
+  position: absolute;
+  fill: $color-card-title;
+
+  &--email {
+    top: 16px;
+    right: 16px;
+
+    @include tablets {
+      top: 20px;
+      right: 18px;
+    }
+  }
+
+  &--phone {
+    top: 12px;
+    right: 13px;
+
+    @include tablets {
+      top: 17px;
+      right: 16px;
+    }
+  }
+}
+
+.form__button {
+  @include desktop {
+    margin-right: 42px;
+  }
+}

@@ -1,10 +1,3 @@
-.program-selection {
-  width: 320px;
-  margin: 0 auto;
-  background: url("../img/index-background-mobile1.png") no-repeat;
-  padding: 0 20px;
-}
-
 .program-selection__title {
   margin: 0;
   margin-bottom: 25px;
@@ -14,7 +7,14 @@
   color: $color-title-light;
   font-family: $title-font;
   font-weight: normal;
-  @include text(36px, 36px)
+
+  @include text(36px, 36px);
+
+  @media (min-width: $tablet-width) {
+    color: $color-title-dark;
+    text-align: start;
+    padding-left: 87px;
+  }
 }
 
 .program-selection__subtitle {
@@ -24,19 +24,62 @@
   font-family: $title-font;
   font-weight: normal;
   text-transform: uppercase;
-  @include text(14px, 14px)
+
+  @include text(14px, 14px);
+
+  @media (min-width: $tablet-width) {
+    color: $color-title-dark;
+    text-align: start;
+    padding-left: 87px;
+  }
 }
 
-.program-selection__link {
-  display: flex;
-  width: 100%;
-  min-height: 40px;
-  background-color: $color-button;
-  justify-content: center;
-  align-items: center;
-  color: $color-title-light;
-  font-family: $title-font;
-  font-weight: normal;
-  text-transform: uppercase;
-  @include text(14px, 18px);
+.program-selection__wrapper {
+  @media (min-width: $tablet-width) {
+    min-height: 972px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 670px;
+  }
+}
+
+.program-selection__image {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+
+  @include tablets {
+    width: 709px;
+    height: 609px;
+    position: absolute;
+    bottom: -250px;
+    z-index: -1;
+    margin-bottom: 0;
+  }
+
+  @include desktop {
+    width: 552px;
+    height: 499px;
+    position: absolute;
+    bottom: 118px;
+    left: 488px;
+    z-index: -1;
+  }
+}
+
+.button {
+  @media (min-width: $tablet-width) {
+    align-items: center;
+    max-width: 244px;
+    max-height: 44px;
+    margin-left: 87px;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-items: center;
+    max-width: 244px;
+    max-height: 44px;
+    margin-left: 87px;
+  }
 }

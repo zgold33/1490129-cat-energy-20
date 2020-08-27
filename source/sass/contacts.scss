@@ -1,0 +1,101 @@
+.contacts__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 26px;
+  padding-bottom: 23px;
+  background-color: $color-title-light;
+
+  @include tablets {
+    padding-bottom: 20px;
+  }
+
+  @include desktop {
+    max-width: $desktop-width;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+.contacts__text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+
+  @include tablets {
+
+    justify-content: space-between;
+    padding: 39px 41px 37px 41px;
+  }
+
+  @include desktop {
+    background-color: $color-title-light;
+    margin-left: 40px;
+    width: 570px;
+    margin-bottom: -201px;
+    top: 95px;
+    position: relative;
+    z-index: 1;
+    padding: 65px 90px 58px 76px;
+  }
+}
+
+.contacts__title {
+  margin: 0;
+  margin-right: 17px;
+  font-family: $title-font;
+  font-weight: normal;
+  color: $color-contacts-text-title;
+  text-transform: uppercase;
+
+  @include text(16px, 18px);
+
+  @include tablets {
+    @include text(20px, 21px);
+  }
+}
+
+.contacts__addres {
+  margin: 0;
+  padding-top: 2px;
+  color: $color-devobs;
+
+  @include text(14px, 20px);
+
+  @include tablets {
+    @include text(16px, 20px);
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 79px;
+    padding-top: 0;
+  }
+
+  @include desktop {
+    text-align: left;
+    padding-top: 0;
+  }
+}
+
+.contacts__map {
+  position: relative;
+  background-color: $color-bg-example;
+  background-image: url("../img/map-pin.png"), url("../img/bg-map-mobile.png");
+  background-repeat: no-repeat, no-repeat;
+  background-size: 57px 53px, cover;
+  background-position: center, center;
+  min-width: 320px;
+  min-height: 362px;
+
+  @include tablets {
+    min-height: 400px;
+    background-image: url("../img/map-pin.png"), url("../img/bg-map-tablet.png");
+  }
+
+  @include desktop {
+    min-height: 400px;
+    background-image: url("../img/map-pin.png"), url("../img/bg-map-desktop.png");
+    background-position: 75% 60%, center;
+  }
+}

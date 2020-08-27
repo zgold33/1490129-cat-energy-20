@@ -6,6 +6,23 @@ body {
   font-weight: 400;
 }
 
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 30px;
+    max-width: 768px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+    max-width: 1220px;
+    padding: 0 110px;
+  }
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -32,4 +49,18 @@ img {
 
 a {
   text-decoration: none;
+}
+
+.button {
+  display: flex;
+  background-color: $color-button;
+  font-family: $title-font;
+  min-height: 40px;
+  justify-content: center;
+  align-items: center;
+  color: $color-title-light;
+
+  @include text(16px, 0);
+  text-transform: uppercase;
+  margin-bottom: 14px;
 }

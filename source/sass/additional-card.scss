@@ -1,0 +1,131 @@
+.additional-card {
+  border-top: 1px solid $color-border-additional;
+  padding-top: 14px;
+  padding-bottom: 17px;
+
+  &:last-child {
+    border-bottom: 1px solid $color-border-additional;
+  }
+
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $color-border-additional;
+    padding: 25px 37px 27px 37px;
+    margin-top: -1px;
+  }
+
+  @include desktop {
+    flex-direction: row;
+    padding: 15px 0 16px 0;
+    border: none;
+    margin-top: 0;
+    border-top: 1px solid $color-border-additional;
+
+    &:last-child {
+      border-bottom: 1px solid $color-border-additional;
+    }
+  }
+}
+
+.additional-card__title {
+  margin: 0;
+  margin-bottom: 10px;
+  font-family: $title-font;
+  font-weight: normal;
+  color: $color-card-title;
+  text-transform: uppercase;
+
+  @include text(16px, 16px);
+
+  @include tablets {
+    margin: 0;
+
+    @include text(20px, 20px);
+  }
+
+  @include desktop {
+    width: 300px;
+    margin-right: 31px;
+  }
+}
+
+.additional-card__row {
+  @include tablets {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 22px;
+  }
+
+  @include desktop {
+
+    align-items: center;
+    margin-bottom: 0;
+  }
+}
+
+.additional-card__stats {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding-top: 9px;
+  margin-bottom: 15px;
+  color: $color-devobs;
+
+  @include text(14px, 14px);
+
+  @include tablets {
+    width: 50%;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+
+    @include text(16px, 20px);
+  }
+
+  @include desktop {
+    justify-content: flex-start;
+  }
+}
+
+.additional-card__description {
+  margin: 0;
+
+  @include tablets {
+    text-align: end;
+    margin: 0;
+    padding: 0;
+    padding-top: 4px;
+  }
+
+  @include desktop {
+    width: 200px;
+    margin-right: 45px;
+    text-align: start;
+  }
+}
+
+.additional-card__value {
+  margin: 0;
+  text-transform: uppercase;
+
+  @include tablets {
+    min-width: 94px;
+    text-align: end;
+    padding-top: 2px;
+  }
+
+  @include desktop {
+    min-width: 50px;
+    padding-top: 5px;
+    text-align: start;
+    margin-right: 10px;
+  }
+}
+
+.additional-card__link {
+  @include desktop {
+    width: 244px;
+    margin-left: auto;
+  }
+}
