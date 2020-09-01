@@ -13,13 +13,12 @@ body {
 
   @media (min-width: $tablet-width) {
     padding: 0 30px;
-    max-width: 768px;
   }
 
   @media (min-width: $desktop-width) {
     margin: 0 auto;
     max-width: 1220px;
-    padding: 0 110px;
+    padding: 0;
   }
 }
 

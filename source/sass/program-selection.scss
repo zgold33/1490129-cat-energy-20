@@ -10,7 +10,7 @@
 
   @include text(36px, 36px);
 
-  @media (min-width: $tablet-width) {
+  @include tablets {
     color: $color-title-dark;
     text-align: start;
     padding-left: 87px;
@@ -27,7 +27,7 @@
 
   @include text(14px, 14px);
 
-  @media (min-width: $tablet-width) {
+  @include tablets {
     color: $color-title-dark;
     text-align: start;
     padding-left: 87px;
@@ -35,27 +35,30 @@
 }
 
 .program-selection__wrapper {
-  @media (min-width: $tablet-width) {
-    min-height: 972px;
+  position: relative;
+
+  @include tablets {
+    min-height: 845px;
+    padding-top: 51px;
   }
 
-  @media (min-width: $desktop-width) {
-    min-height: 670px;
+  @include desktop {
+    min-height: 637px;
+    padding-top: 101px;
   }
 }
 
 .program-selection__image {
-    display: block;
-    text-align: center;
-    margin: 0 auto;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
 
   @include tablets {
     width: 709px;
     height: 609px;
     position: absolute;
-    bottom: -250px;
+    //bottom: -15px;
     z-index: -1;
-    margin-bottom: 0;
   }
 
   @include desktop {
@@ -69,14 +72,14 @@
 }
 
 .button {
-  @media (min-width: $tablet-width) {
+  @include tablets {
     align-items: center;
     max-width: 244px;
     max-height: 44px;
     margin-left: 87px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     align-items: center;
     max-width: 244px;
     max-height: 44px;
