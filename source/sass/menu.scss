@@ -1,0 +1,30 @@
+.menu {
+    font-family: $title-font;
+    font-weight: 500;
+    display: none;
+  
+    @include text(20px, 20px);
+  
+    &--nojs {
+      display: block;
+    }
+  
+    &--opened {
+      display: block;
+    }
+  
+    @include tablets {
+      display: block;
+  
+      @include text(18px, 24px);
+      font-weight: 400;
+      flex-wrap: wrap;
+    }
+  
+    @include desktop {
+      display: block;
+  
+      @include text(20px, 30px);
+    }
+  }
+  

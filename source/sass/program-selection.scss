@@ -1,6 +1,6 @@
 .program-selection__title {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 26px;
   padding: 0;
   padding-top: 27px;
   text-align: center;
@@ -10,16 +10,19 @@
 
   @include text(36px, 36px);
 
-  @media (min-width: $tablet-width) {
+  @include tablets {
+    padding-top: 0;
+    margin-bottom: 39px;
     color: $color-title-dark;
     text-align: start;
-    padding-left: 87px;
+    padding-left: 80px;
+    @include text(60px, 60px);
   }
 }
 
 .program-selection__subtitle {
   text-align: center;
-  margin-bottom: 29px;
+  margin-bottom: 31px;
   color: $color-title-light;
   font-family: $title-font;
   font-weight: normal;
@@ -27,59 +30,52 @@
 
   @include text(14px, 14px);
 
-  @media (min-width: $tablet-width) {
+  @include tablets {
     color: $color-title-dark;
+    margin-bottom: 52px;
     text-align: start;
-    padding-left: 87px;
+    padding-left: 80px;
+    @include text(20px, 20px);
   }
 }
 
 .program-selection__wrapper {
-  @media (min-width: $tablet-width) {
-    min-height: 972px;
+  position: relative;
+
+  @include tablets {
+    min-height: 845px;
+    padding-top: 51px;
   }
 
-  @media (min-width: $desktop-width) {
-    min-height: 670px;
+  @include desktop {
+    min-height: 637px;
+    padding-top: 98px;
   }
 }
 
 .program-selection__image {
-    display: block;
-    text-align: center;
-    margin: 0 auto;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: -2px;
+  margin-bottom: 2px;
 
   @include tablets {
     width: 709px;
     height: 609px;
     position: absolute;
-    bottom: -250px;
+    bottom: 77px;
+    left: 448px;
+    margin-top: -30px;
     z-index: -1;
-    margin-bottom: 0;
   }
 
   @include desktop {
     width: 552px;
     height: 499px;
     position: absolute;
-    bottom: 118px;
-    left: 488px;
+    bottom: 121px;
+    left: 447px;
     z-index: -1;
-  }
-}
-
-.button {
-  @media (min-width: $tablet-width) {
-    align-items: center;
-    max-width: 244px;
-    max-height: 44px;
-    margin-left: 87px;
-  }
-
-  @media (min-width: $desktop-width) {
-    align-items: center;
-    max-width: 244px;
-    max-height: 44px;
-    margin-left: 87px;
   }
 }

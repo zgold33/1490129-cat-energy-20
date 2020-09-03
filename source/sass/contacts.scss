@@ -1,12 +1,13 @@
 .contacts__wrapper {
   display: flex;
   justify-content: space-between;
-  padding-top: 26px;
+  padding-top: 29px;
   padding-bottom: 23px;
   background-color: $color-title-light;
 
   @include tablets {
     padding-bottom: 20px;
+    padding-top: 25px;
   }
 
   @include desktop {
@@ -25,7 +26,7 @@
   @include tablets {
 
     justify-content: space-between;
-    padding: 39px 41px 37px 41px;
+    padding: 5px 41px 39px 41px;
   }
 
   @include desktop {
@@ -52,6 +53,7 @@
 
   @include tablets {
     @include text(20px, 21px);
+    padding-top: 5px;
   }
 }
 
@@ -85,7 +87,7 @@
   background-repeat: no-repeat, no-repeat;
   background-size: 57px 53px, cover;
   background-position: center, center;
-  min-width: 320px;
+  //min-width: 320px;
   min-height: 362px;
 
   @include tablets {

@@ -13,13 +13,12 @@ body {
 
   @media (min-width: $tablet-width) {
     padding: 0 30px;
-    max-width: 768px;
   }
 
   @media (min-width: $desktop-width) {
     margin: 0 auto;
     max-width: 1220px;
-    padding: 0 110px;
+    padding: 0;
   }
 }
 
@@ -53,14 +52,68 @@ a {
 
 .button {
   display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 7px;
+  color: $color-title-light;
+  text-transform: uppercase;
   background-color: $color-button;
   font-family: $title-font;
-  min-height: 40px;
-  justify-content: center;
-  align-items: center;
-  color: $color-title-light;
+  font-weight: normal;
 
-  @include text(16px, 0);
-  text-transform: uppercase;
-  margin-bottom: 14px;
+  &:hover {
+    background-color: $color-bg-btn-hover;
+  }
+
+  &:active {
+    background-color: $color-bg-btn-hover;
+    color: $color-text-alt-active;
+  }
+
+  &--theme--gray {
+    color: $color-devobs;
+    background-color: $color-bg;
+
+    &:hover {
+      background-color: $color-catalog-border;
+    }
+
+    &:active {
+      background-color: $color-catalog-border;
+      color: $color-text-paragraph-active;
+    }
+  }
+
+  &--adaptive {
+    @include text(14px, 18px);
+    padding: 11px 5px;
+
+    @include tablets {
+      @include text(20px, 28px);
+      width: 244px;
+      padding: 13px 5px;
+      margin-left: 82px;
+    }
+
+    @include desktop {
+      padding: 13px 5px;
+      margin-left: 80px;
+    }
+  }
+
+  &--size-product {
+    @include text(16px, 20px);
+    padding: 10px 5px;
+  }
+
+  &--size--form {
+    @include text(16px, 20px);
+    padding: 10px 5px;
+    border: none;
+
+    @include tablets {
+      @include text(20px, 24px);
+      padding: 14px 5px;
+    }
+  }
 }

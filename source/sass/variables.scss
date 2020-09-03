@@ -1,6 +1,8 @@
 $mobile-width-only:767px;
 $tablet-width:768px;
 $desktop-width:1220px;
+$retina-dpi: "min-resolution: 144dpi";
+$retina-dppx: "min-resolution: 1.5dppx";
 
 $color-background: #e5e5e5;
 $color-border: #d9d9d9;
@@ -19,6 +21,11 @@ $color-border-hover:#cdcdcd;
 $color-border-active:#444444;
 $color-border-error:#ff8282;
 $color-checkbox-active:#bababa;
+$color-bg-btn-hover: #5eaa2f;
+$color-catalog-border:#ebebeb;
+$color-text-paragraph-active:rgba(68, 68, 68, 0.3);
+$color-text-alt-active:rgba(255, 255, 255, 0.3);
+$color-social-link:#666666;
 
 $main-font: "Arial","sans-serif";
 $title-font: "Oswald";

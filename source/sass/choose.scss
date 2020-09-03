@@ -2,20 +2,36 @@
   background-color: $color-bg;
 }
 
+.choose_wrapper {
+  position: relative;
+
+  @include tablets {
+    padding-right: 200px; 
+    margin-left: 52px;
+    margin-bottom: 53px;
+    margin-top: 77px;
+    margin-right: 62px;
+  }
+
+  @include desktop {
+    padding-right: 0;
+    margin-bottom: 55px
+  }
+}
+
 .choose__title {
   font-family: $title-font;
   margin-top: 0;
   font-weight: normal;
-  padding-left: 70px;
+  padding-left: 72px;
   text-transform: uppercase;
-  position: relative;
 
   @include text(24px, 37px);
 
   &::before {
     @include pseudo;
-    top: 0;
-    left: 0;
+    top: -7px;
+    left: 2px;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -24,31 +40,118 @@
 
   &--slim::after {
     @include pseudo;
-    top: 0;
-    left: 7px;
+    top: -9px;
+    left: 9px;
     width: 36px;
     height: 50px;
-    background: url("../img/icon-cat-slim.svg") no-repeat;
+    background-image: url("../img/icon-cat-slim.svg");
+    background-repeat: no-repeat;
   }
 
   &--pro::after {
     @include pseudo;
-    top: 10px;
-    left: -10px;
+    top: 3px;
+    left: -6px;
     width: 67px;
     height: 28px;
-    background: url("../img/icon-cat-pro.svg") no-repeat;
+    background-image: url("../img/icon-cat-pro.svg");
+    background-repeat: no-repeat;
+  }
+
+  @include tablets {
+    padding-left: 0;
+    padding-bottom: 0;
+    margin-bottom: 25px;
+    @include text(36px, 36px);
+
+    &::before {
+      @include pseudo;
+      top: 14px;
+      left: 393px;
+      width: 201px;
+      height: 201px;
+    }
+
+    &--slim::after {
+      @include pseudo;
+      top: 3px;
+      left: 424px;
+      width: 140px;
+      height: 192px;
+      background-image: url("../img/icon-cat-slim.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  
+    &--pro::after {
+      @include pseudo;
+      top: 58px;
+      left: 359px;
+      width: 268px;
+      height: 112px;
+      background-image: url("../img/icon-cat-pro.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  @include desktop {
+    text-align: center;
+    padding-left: 70px;
+
+    &::before {
+      @include pseudo;
+      top: 0;
+      left: 0;
+      width: 50px;
+      height: 50px;
+    }
+
+    &--slim::after {
+      @include pseudo;
+      top: 0;
+      left: 7px;
+      width: 36px;
+      height: 50px;
+      background-image: url("../img/icon-cat-slim.svg");
+      background-repeat: no-repeat;
+    }
+  
+    &--pro::after {
+      @include pseudo;
+      top: 10px;
+      left: -10px;
+      width: 67px;
+      height: 28px;
+      background-image: url("../img/icon-cat-pro.svg");
+      background-repeat: no-repeat;
+    }
   }
 }
 
 .choose__text {
   margin: 0;
   padding: 0;
-  padding-bottom: 23px;
-  margin-bottom: 15px;
+  padding-top: 5px;
+  padding-bottom: 22px;
   border-bottom: 1px solid $color-border;
 
   @include text(14px, 18px);
+
+  @include tablets {
+    padding-bottom: 31px;
+    padding-top: 0;
+    border: none;
+    @include text(16px, 24px);
+
+    &--pro {
+      padding-right: 30px;
+    }
+  }
+
+  @include desktop {
+    padding-bottom: 23px;
+  }
 }
 
 .choose__link {
@@ -58,6 +161,7 @@
   font-weight: normal;
   text-transform: uppercase;
   padding-right: 15px;
+  padding-top: 20px;
   color: $color-title-dark;
 
   @include text(16px, 16px);
@@ -67,7 +171,20 @@
     background: url("../img/icon-arrow.svg") no-repeat;
     width: 32px;
     height: 10px;
-    top: 3px;
-    right: -25px;
+    top: 21px;
+    right: -33px;
+  }
+
+  @include tablets {
+    @include text(20px, 30px);
+    
+    &::after {
+      @include pseudo;
+      background: url("../img/icon-arrow.svg") no-repeat;
+      width: 32px;
+      height: 10px;
+      top: 29px;
+      right: -41px;
+    }
   }
 }

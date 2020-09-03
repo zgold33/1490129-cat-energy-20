@@ -1,75 +1,157 @@
-.advantages {
-  margin-bottom: 42px;
+.advantages__wrapper {
+  @include tablets {
+    padding-bottom: 20px;
+    margin: 0 auto;
+  }
 
-  @media (min-width: $tablet-width) {
-    margin-bottom: 0;
+  @include desktop {
+    padding-bottom: 0;
   }
 }
 
 .advantages__title {
   margin: 0;
+  margin-top: 27px;
   margin-bottom: 38px;
   font-family: $title-font;
   font-weight: normal;
+  color: $color-title-dark;
 
   @include text(36px, 40px);
+
+  @include tablets {
+    @include text(60px, 60px);
+    margin-bottom: 70px;
+    margin-top: 44px;
+  }
+}
+
+.advantages__item-text {
+  padding-top: 3px;
+
+  @include tablets {
+    padding-top: 32px;
+  }
 }
 
 .advantages__list {
   list-style: none;
   margin: 0;
   padding: 0;
+  margin-bottom: 22px;
 
-  @media (min-width: $tablet-width) {
+  @include tablets {
     display: grid;
-    grid-template-columns: 246px 246px;
-    grid-template-rows: 280px 280px;
-    grid-row-gap: 37px;
-    justify-content: space-between;
+    //grid-template-columns: 246px 246px;
+    //grid-template-rows: 280px 280px;
+    //grid-row-gap: 37px;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 88px;
+    grid-column-gap: 60px;
+    counter-reset: number;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 280px;
+    //grid-template-rows: 280px;
+    grid-column-gap: 75px;
+    grid-row-gap: 40px;
+    margin-bottom: 10px;
+    counter-reset: number;
   }
 }
 
 .advantages__item {
   display: flex;
-  margin-bottom: 20px;
-  counter-increment: section; //не работает
+  color: $color-devobs;
+  position: relative;
 
   @include text(14px, 18px);
 
   &::before {
     content: "";
     flex-shrink: 0;
-    margin-right: 20px;
+    margin-right: 0;
     width: 60px;
     height: 60px;
-
+  }
     &--functional-nutrition::before {
-      background: url("../img/advantage-leaf.png") no-repeat;
+      background-image: url("../img/advantage-leaf.png");
+      background-repeat: no-repeat;
     }
 
-    background: url("../img/advantage-powder.png") no-repeat;
+    &--fast-cook::before {
+      background-image: url("../img/advantage-powder.png");
+    background-repeat: no-repeat;
   }
 
   &--equivalent::before {
-    background: url("../img/advantage-knife.png") no-repeat;
+    background-image: url("../img/advantage-knife.png");
+    background-repeat: no-repeat;
   }
 
   &--good-changes::before {
-    background: url("../img/advantage-libra.png") no-repeat;
+    background-image: url("../img/advantage-libra.png");
+    background-repeat: no-repeat;
   }
 
-  @media (min-width: $desktop-width) {
-    display: flex;
+  @include tablets {
+    flex-direction: column;
+    margin-bottom: 40px;
+    padding-top: 3px;
+    width: 250px;
+
+    @include text(16px, 24px);
+  }
+
+  &::before {
+    content: "";
+    flex-shrink: 0;
+    margin-right: 0;
+    width: 80px;
+    height: 80px;
+  }
+    &--functional-nutrition::before {
+      background-image: url("../img/advantage-leaf-tablet.png");
+      background-repeat: no-repeat;
+    }
+
+    &--fast-cook::before {
+      background-image: url("../img/advantage-powder-tablet.png");
+    background-repeat: no-repeat;
+  }
+
+  &--equivalent::before {
+    background-image: url("../img/advantage-knife-tablet.png");
+    background-repeat: no-repeat;
+  }
+
+  &--good-changes::before {
+    background-image: url("../img/advantage-libra-tablet.png");
+    background-repeat: no-repeat;
+  }
+
+  &::after {
+    @include tablets {
+    @include pseudo;
+    top: 103px;
+    right: 24px;
+    width: 112px;
+    height: 280px;
+    color: $color-bg;
+    font-family: $title-font;
+
+    @include text(280px, 0);
+    content: counter(number);
+    counter-increment: number;
+    z-index: -1;
+    }
+  }
+
+  @include desktop {
     flex-direction: column;
 
-    ::after {
-      content: counter(section); //не работает
-    }
+    padding-top: 2px;
   }
 }

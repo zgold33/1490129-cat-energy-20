@@ -1,3 +1,13 @@
+.item-card {
+  @include tablets {
+    background: linear-gradient($color-title-light 0 81px, $color-bg 81px 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 40px;
+  }
+}
+
 .item-card__wrapper {
   display: flex;
   justify-content: center;
@@ -5,6 +15,12 @@
   padding: 0 20px;
   border-top: 1px solid $color-light-border;
   border-bottom: 1px solid $color-light-border;
+
+  @include tablets {
+    flex-direction: column;
+    border: none;
+    padding: 0;
+  }
 }
 
 .item-card__image {
@@ -12,11 +28,32 @@
   justify-content: center;
   align-items: center;
   width: 140px;
+
+  @include tablets {
+    position: relative;
+    padding-bottom: 28px;
+  }
+
+  @include desktop {
+    padding-bottom: 46px;
+  }
 }
 
 .item-card__picture {
-  width: 100%;
+  display: block;
   object-fit: cover;
+
+  @include tablets {
+    width: 324px;
+
+    object-fit: contain;
+  }
+
+  @include desktop {
+    width: 245px;
+
+    object-fit: contain;
+  }
 }
 
 .item-card__info {
@@ -31,6 +68,12 @@
   @include text(16px, 20px);
   text-transform: uppercase;
   color: $color-card-title;
+  
+  @include tablets {
+    display: block;
+    padding-bottom: 21px;
+    text-align: center;
+  }
 }
 
 .item-card__stats {
@@ -40,6 +83,11 @@
   color: $color-devobs;
 
   @include text(12px, 16px);
+
+  @include tablets {
+    grid-template-columns: 125px 125px;
+    padding-bottom: 33px;
+  }
 }
 
 .item-card__value {

@@ -13,13 +13,23 @@
 }
 
 .variants__item {
-  padding: 30px 20px 18px 20px;
-  margin-top: 20px;
+  padding: 30px 20px 17px 19px;
+  margin-top: 22px;
   width: 100%;
 
-  @media (min-width: $desktop-width) {
+  @include tablets {
+    padding: 1px 20px 4px 1px;
+    margin-top: 16px;
+
+  &--pro {
+    margin-top: 29px;
+  }
+  }
+
+  @include desktop {
     display: flex;
     margin-left: 80px;
     width: 570px;
+    margin-top: 16px;
   }
 }
