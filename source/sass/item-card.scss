@@ -14,7 +14,7 @@
   align-items: center;
   padding: 0 20px;
   border-top: 1px solid $color-light-border;
-  border-bottom: 1px solid $color-light-border;
+  // border-bottom: 1px solid $color-light-border;
 
   @include tablets {
     flex-direction: column;
@@ -58,10 +58,12 @@
 
 .item-card__info {
   flex-grow: 1;
-  margin-top: 15px;
+  margin-top: 9px;
 }
 
 .item-card__title {
+  display: block;
+  width: 80px;
   font-family: $title-font;
   font-weight: normal;
 
@@ -70,27 +72,93 @@
   color: $color-card-title;
   
   @include tablets {
-    display: block;
-    padding-bottom: 21px;
+    @include text(20px, 24px);
+    width: 140px;
+    align-self: center;
     text-align: center;
+    padding-left: 4px;
+    margin-top: 0;
+  }
+
+  @include desktop {
+    @include text(20px, 21px);
+    margin-top: 0;
   }
 }
 
+// .item-card__stats {
+//   display: grid;
+//   grid-template-columns: auto auto;
+//   grid-column-gap: 5px;
+//   color: $color-devobs;
+
+//   @include text(12px, 16px);
+
+//   @include tablets {
+//     grid-template-columns: 125px 125px;
+//     padding-bottom: 33px;
+//   }
+// }
+
 .item-card__stats {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-column-gap: 5px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  padding-top: 11px;
+  margin-left: -2px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 31px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 15px;
+  }
+}
+
+.item-card__row {
+  display: flex;
+
+  @include text(12px, 15px);
   color: $color-devobs;
 
-  @include text(12px, 16px);
+  @media (min-width: $tablet-width) {
+    border-bottom: 1px solid $color-border-additional;
 
-  @include tablets {
-    grid-template-columns: 125px 125px;
-    padding-bottom: 33px;
+    @include text(17px, 17px);
+    padding: 6px 0;
   }
+
+  @media (min-width: $desktop-width) {
+    border-bottom: 1px solid $color-border-additional;
+
+    @include text(17px, 17px);
+  }
+}
+
+.item-card__description {
+  flex-grow: 1;
 }
 
 .item-card__value {
-  text-align: right;
+  flex-grow: 1;
   margin: 0;
+  text-align: right;
+  margin-right: -4px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: -5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: -3px;
+  }
+}
+
+.item-card__order {
+  margin: 0 20px 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 36px 0 39px;
+  }
 }

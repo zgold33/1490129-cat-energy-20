@@ -1,15 +1,19 @@
 .catalog__title {
-  text-align: center;
+  text-align: start;
   font-family: $title-font;
   font-weight: normal;
-  padding-bottom: 41px;
+  padding-bottom: 40px;
   padding-top: 27px;
   border-top: 1px solid $color-light-border;
+  margin-top: 0;
+  padding-left: 20px;
+  padding-right: 0;
 
   @include text(36px, 36px);
   margin-bottom: 0;
 
   @include tablets {
+    text-align: center;
     text-align: start;
     border: none;
   }

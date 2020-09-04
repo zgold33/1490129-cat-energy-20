@@ -5,6 +5,10 @@
       padding-right: 22px;
       padding-top: 19px;
     }
+
+    @include desktop {
+      padding-top: 15px;
+    }
 }
 
 .copyright__logo {

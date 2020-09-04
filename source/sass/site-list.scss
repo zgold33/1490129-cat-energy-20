@@ -2,21 +2,39 @@
   margin: 0;
   padding: 0;
 
-  @media (min-width: $tablet-width) {
+  @include tablets {
     display: flex;
     flex-wrap: wrap;
+    padding-top: 42px;
+  }
+
+  @include desktop {
     padding-top: 40px;
   }
 }
 
 .site-list__item {
-  padding-top: 29px;
+  padding-top: 22px;
   padding-bottom: 23px;
   list-style: none;
   text-align: center;
   border-top: 1px solid $color-light-border;
 
   @include tablets {
+    padding-top: 29px;
+    border: none;
+    margin-right: 30px;
+
+    &:nth-child(2) {
+      margin-right: 28px;
+    }
+
+    &:last-child {
+      margin-right: 21px;
+    }
+  }
+
+  @include desktop {
     border: none;
     margin-right: 25px;
 

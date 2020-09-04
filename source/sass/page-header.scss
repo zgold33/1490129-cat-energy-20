@@ -24,10 +24,15 @@
   padding-right: 20px;
 
   @include tablets {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 51px;
+  }
+
+  @include desktop {
     padding-left: 0;
     padding-right: 0;
     padding-top: 55px;
-
   }
 }
 
