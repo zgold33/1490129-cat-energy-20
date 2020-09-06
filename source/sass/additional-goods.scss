@@ -1,5 +1,7 @@
 .additional-goods__wrapper {
-  outline: solid orange;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: start;
 
   @include desktop {
     display: flex;
@@ -22,9 +24,11 @@
 }
 
 .additional-goods__title {
+  border-top: 1px solid $color-light-border;
   font-family: $title-font;
   font-weight: normal;
   color: $color-title-dark;
+  padding-top: 25px;
 
   @include text(24px, 24px);
 
@@ -40,8 +44,8 @@
 }
 
 .additional-goods__list {
-  outline: solid green;
-  padding-left: 0;
+  padding-left: 20px;
+  padding-right: 20px;
   list-style: none;
   margin-bottom: 39px;
 
@@ -57,3 +61,80 @@
     margin-bottom: 85px;
   }
 }
+
+// .additional-goods__wrapper {
+//   @media (min-width: $desktop-width) {
+//     margin: 0 auto;
+//     max-width: $desktop-width;
+//     padding-right: 40px;
+
+//     display: grid;
+//     grid-template-columns: 1fr 245px;
+//   }
+// }
+
+// .additional-goods__title-wrapper {
+//   border-top: 2px solid $color-button;
+//   margin-bottom: 15px;
+//   margin-top: 43px;
+
+//   @media (min-width: $tablet-width) {
+//     margin-bottom: 27px;
+//     margin-top: 90px;
+//   }
+
+//   @media (min-width: $desktop-width) {
+//     margin-top: 97px;
+//     margin-bottom: 54px;
+//   }
+// }
+
+// .additional-goods__title {
+//   position: relative;
+//   display: inline-block;
+//   background: $color-title-light;
+//   margin: 0 0 0 -20px;
+//   transform: translateY(-61%);
+//   padding: 0 20px;
+//   font-family: $title-font;
+//   font-weight: normal;
+//   color: $color-title-dark;
+
+
+//   @include text(24px, 24px);
+
+//   @media (min-width: $tablet-width) {
+//     padding: 28px 35px 0 38px;
+//     margin: 0 0 0 0;
+//     transform: translateY(-81%);
+
+//     @include text(36px, 36px);
+//   }
+
+//   @media (min-width: $desktop-width) {
+//     margin: 0 0 0 -40px;
+//     padding: 0 35px 0 40px;
+//     transform: translateY(-66%);
+//   }
+// }
+
+// .additional-goods__list {
+//   list-style: none;
+//   min-width: 320px;
+//   margin: 0;
+//   padding: 0 20px;
+
+//   @media (min-width: $tablet-width) {
+//     padding: 0 30px;
+//     margin-bottom: 68px;
+//   }
+
+//   @media (min-width: $desktop-width) {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+//     margin-right: 40px;
+//     margin-bottom: 85px;
+//     padding: 0 40px;
+//   }
+// }

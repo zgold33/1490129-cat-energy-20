@@ -2,14 +2,14 @@
   margin-bottom: 40px;
 
   @include tablets {
-    margin-bottom: 67px;
+    margin-bottom: 65px;
   }
 }
 
 .program__title {
   margin: 0;
   margin-bottom: 10px;
-  padding-top: 19px;
+  padding-top: 29px;
   padding-bottom: 26px;
   font-family: $title-font;
   font-weight: normal;
@@ -24,7 +24,7 @@
   }
 
   @include desktop {
-    padding-top: 64px;
+    padding-top: 60px;
     margin-bottom: 31px;
   }
 }
@@ -37,6 +37,10 @@
   text-transform: uppercase;
 
   @include text(14px, 18px);
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    padding: 0 40px;
+  }
 
   @include tablets {
     @include text(20px, 30px);

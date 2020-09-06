@@ -24,13 +24,20 @@
     margin-bottom: 70px;
     margin-top: 44px;
   }
+
+  @include desktop {
+    margin-bottom: 70px;
+    margin-top: 72px;
+  }
 }
 
 .advantages__item-text {
   padding-top: 3px;
+  padding-left: 20px;
 
   @include tablets {
     padding-top: 32px;
+    padding-left: 0;
   }
 }
 
@@ -66,6 +73,7 @@
   display: flex;
   color: $color-devobs;
   position: relative;
+  padding-bottom: 20px;
 
   @include text(14px, 18px);
 
@@ -76,13 +84,14 @@
     width: 60px;
     height: 60px;
   }
-    &--functional-nutrition::before {
-      background-image: url("../img/advantage-leaf.png");
-      background-repeat: no-repeat;
-    }
 
-    &--fast-cook::before {
-      background-image: url("../img/advantage-powder.png");
+  &--functional-nutrition::before {
+    background-image: url("../img/advantage-leaf.png");
+    background-repeat: no-repeat;
+  }
+
+  &--fast-cook::before {
+    background-image: url("../img/advantage-powder.png");
     background-repeat: no-repeat;
   }
 
@@ -101,17 +110,18 @@
     margin-bottom: 40px;
     padding-top: 3px;
     width: 250px;
+    padding-bottom: 0;
 
     @include text(16px, 24px);
-  }
 
-  &::before {
-    content: "";
-    flex-shrink: 0;
-    margin-right: 0;
-    width: 80px;
-    height: 80px;
-  }
+    &::before {
+      content: "";
+      flex-shrink: 0;
+      margin-right: 0;
+      width: 80px;
+      height: 80px;
+    }
+
     &--functional-nutrition::before {
       background-image: url("../img/advantage-leaf-tablet.png");
       background-repeat: no-repeat;
@@ -119,33 +129,34 @@
 
     &--fast-cook::before {
       background-image: url("../img/advantage-powder-tablet.png");
-    background-repeat: no-repeat;
-  }
+      background-repeat: no-repeat;
+    }
 
-  &--equivalent::before {
-    background-image: url("../img/advantage-knife-tablet.png");
-    background-repeat: no-repeat;
-  }
+    &--equivalent::before {
+      background-image: url("../img/advantage-knife-tablet.png");
+      background-repeat: no-repeat;
+    }
 
-  &--good-changes::before {
-    background-image: url("../img/advantage-libra-tablet.png");
-    background-repeat: no-repeat;
+    &--good-changes::before {
+      background-image: url("../img/advantage-libra-tablet.png");
+      background-repeat: no-repeat;
+    }
   }
 
   &::after {
     @include tablets {
-    @include pseudo;
-    top: 103px;
-    right: 24px;
-    width: 112px;
-    height: 280px;
-    color: $color-bg;
-    font-family: $title-font;
+      @include pseudo;
+      top: 103px;
+      right: 24px;
+      width: 112px;
+      height: 280px;
+      color: $color-bg;
+      font-family: $title-font;
 
-    @include text(280px, 0);
-    content: counter(number);
-    counter-increment: number;
-    z-index: -1;
+      @include text(280px, 0);
+      content: counter(number);
+      counter-increment: number;
+      z-index: -1;
     }
   }
 

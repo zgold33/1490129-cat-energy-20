@@ -1,14 +1,17 @@
 .copyright__name {
-    color: $color-devobs;
-  
-    @include tablets {
-      padding-right: 22px;
-      padding-top: 19px;
-    }
+  color: $color-devobs;
+
+  @include tablets {
+    padding-right: 22px;
+    padding-top: 19px;
+  }
+
+  @include desktop {
+    padding-top: 15px;
+  }
 }
 
 .copyright__logo {
-
   @include tablets {
     padding-top: 21px;
   }

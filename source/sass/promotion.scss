@@ -1,8 +1,10 @@
 .promotion__wrapper {
-    outline: solid purple;
   display: flex;
   justify-content: center;
   min-height: 289px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 34px;
 
   background-color: $color-button;
   background-image: url("../img/gift-photo-mobile.jpg");

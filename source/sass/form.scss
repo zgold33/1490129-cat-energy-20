@@ -1,6 +1,6 @@
 .form {
   @include tablets {
-    padding-bottom: 69px;
+    padding-bottom: 104px;
   }
 
   @include desktop {
@@ -12,12 +12,12 @@
   margin: 0 0 41px 0;
 
   &--position--row {
-    margin-bottom: 29px;
+    margin-bottom: 28px;
   }
 
   @include tablets {
     padding: 0 0 0 0;
-    margin: 0 0 19px 0;
+    margin: 0 0 20px 0;
 
     &--position--row {
       margin-bottom: 0;
@@ -57,11 +57,10 @@
     }
   }
 
-
   &--position--row {
     @include desktop {
       grid-column: span 2;
-      margin: 0 40px 0 0;
+      margin: 0 2px 0 0;
       padding: 0 0 0 0;
     }
   }
@@ -80,7 +79,7 @@
   @include desktop {
     max-width: $desktop-width;
     margin: 0 auto;
-    padding: 0 0 0 40px;
+    padding: 0;
   }
 
   &--cat {
@@ -107,7 +106,7 @@
     @include desktop {
       grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-column-gap: 80px;
-      margin-top: 2px;
+      margin-top: 5px;
       margin-bottom: 59px;
     }
   }
@@ -210,19 +209,19 @@
       @include pseudo;
       width: 30px;
       height: 30px;
-      top: 0;
+      top: -2px;
       left: 0;
       border: 1px solid $color-border-hover;
     }
 
     @include tablets {
-      padding: 3px 0 6px 59px;
+      padding: 1px 0 6px 59px;   // квадрат чекбокса десктоп
 
       &::before {
         @include pseudo;
         width: 40px;
         height: 40px;
-        top: -4px;
+        top: -6px;
         left: 0;
         border: 1px solid $color-border-hover;
       }
@@ -261,7 +260,7 @@
 }
 
 .form__input {
-  padding: 16px 10px 10px 14px;
+  padding: 13px 10px 10px 14px;
   flex-grow: 1;
 
   &--theme--light {
@@ -274,6 +273,12 @@
 
   &--contacts {
     border: 1px solid $color-border-hover;
+    // margin-right: -18px;
+    max-width: 203px;
+
+    &--email {
+      max-width: 220px;
+    }
   }
 
   &--contacts:active {
@@ -305,6 +310,11 @@
 
     &--contacts {
       padding: 12px 8px 8px 18px;
+      max-width: 550px;
+
+      &--email {
+        max-width: 580px;
+      }
     }
   }
 
@@ -327,7 +337,12 @@
 
     @include tablets {
       min-height: 174px;
-      padding: 11px 10px 10px 19px;
+      padding: 8px 10px 10px 19px;
+    }
+
+    @include desktop {
+      min-height: 174px;
+      padding: 12px 10px 10px 17px;
     }
   }
 
@@ -350,7 +365,8 @@
   }
 
 
-  &--style--radio:hover:not(:disabled) + .form__label--style--radio::before {
+  &--style--radio:hover:not(:disabled) + .form__label--style--radio::before,
+  &--style--radio:focus:not(:disabled) + .form__label--style--radio::before {
     border: 1px solid $color-checkbox-active;
   }
 
@@ -394,7 +410,8 @@
     overflow: hidden;
   }
 
-  &--style--check:hover:not(:disabled) + .form__label--style--check::before {
+  &--style--check:hover:not(:disabled) + .form__label--style--check::before,
+  &--style--check:focus:not(:disabled) + .form__label--style--check::before {
     border: 1px solid $color-checkbox-active;
   }
 
@@ -402,7 +419,7 @@
     @include pseudo;
     width: 18px;
     height: 14px;
-    top: 8px;
+    top: 6px;
     left: 6px;
     background-image: url("../img/check.svg");
   }
@@ -420,10 +437,18 @@
       @include pseudo;
       width: 18px;
       height: 14px;
-      top: 10px;
+      top: 8px;
       left: 12px;
       background-image: url("../img/check.svg");
     }
+  }
+}
+
+.form__input-error {
+  border-color: $color-border-error;
+
+  & + .form__icon {
+    fill: $color-border-error;
   }
 }
 
@@ -458,8 +483,8 @@
   display: inline-block;
   background: $color-title-light;
 
-  margin: 0 79px 0 -20px;
-  transform: translateY(-61%);
+  margin: 0 79px 4px -20px;
+  transform: translateY(-56%);
   padding: 0 20px;
   font-family: $title-font;
   font-weight: normal;
@@ -468,25 +493,42 @@
   @include text(24px, 26px);
 
   &--position {
-    transform: translateY(-37%);
+    transform: translateY(-30%);
+  }
+
+  &--comment {
+    transform: translateY(-56%);
   }
 
   @include tablets {
     @include text(36px, 36px);
     margin: 0 0 0 0;
     padding: 0 46px 0 39px;
+    transform: translateY(-63%);
 
     &--position {
-      transform: translateY(-67%);
+      transform: translateY(-63%);
+    }
+
+    &--comment {
+      transform: translateY(-64%);
     }
   }
 
   @include desktop {
-    transform: translateY(-70%);
+    transform: translateY(-69%);
 
     @include text(36px, 36px);
     padding: 0 40px;
     margin: 0 -40px;
+
+    &--position {
+      transform: translateY(-69%);
+    }
+
+    &--comment {
+      transform: translateY(-69%);
+    }
   }
 }
 
@@ -508,6 +550,7 @@
 
   @include desktop {
     margin-bottom: 0;
+    margin-left: 20px;
   }
 }
 
@@ -538,6 +581,6 @@
 
 .form__button {
   @include desktop {
-    margin-right: 42px;
+    margin-right: 24px;
   }
 }

@@ -28,8 +28,12 @@
 
   @include desktop {
     display: flex;
-    margin-left: 80px;
+    margin-left: 0;
     width: 570px;
-    margin-top: 16px;
+    margin-top: 12px;
+
+    &--pro {
+      margin-left: 80px;
+    }
   }
 }

@@ -31,13 +31,16 @@
 
   @include desktop {
     background-color: $color-title-light;
-    margin-left: 40px;
+    margin-left: 0;
     width: 570px;
     margin-bottom: -201px;
     top: 95px;
     position: relative;
     z-index: 1;
-    padding: 65px 90px 58px 76px;
+    padding-top: 63px;
+    padding-right: 90px;
+    padding-bottom: 58px;
+    padding-left: 76px;
   }
 }
 
@@ -52,7 +55,7 @@
   @include text(16px, 18px);
 
   @include tablets {
-    @include text(20px, 21px);
+    @include text(20px, 24px);
     padding-top: 5px;
   }
 }

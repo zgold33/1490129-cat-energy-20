@@ -6,7 +6,7 @@
   position: relative;
 
   @include tablets {
-    padding-right: 200px; 
+    padding-right: 200px;
     margin-left: 52px;
     margin-bottom: 53px;
     margin-top: 77px;
@@ -15,7 +15,8 @@
 
   @include desktop {
     padding-right: 0;
-    margin-bottom: 55px
+    margin-bottom: 55px;
+    margin-right: 20px;
   }
 }
 
@@ -62,6 +63,7 @@
     padding-left: 0;
     padding-bottom: 0;
     margin-bottom: 25px;
+
     @include text(36px, 36px);
 
     &::before {
@@ -82,7 +84,7 @@
       background-repeat: no-repeat;
       background-size: contain;
     }
-  
+
     &--pro::after {
       @include pseudo;
       top: 58px;
@@ -97,32 +99,36 @@
 
   @include desktop {
     text-align: center;
-    padding-left: 70px;
+    padding-left: 9px;
+
+    &--pro {
+      padding-left: 51px;
+    }
 
     &::before {
       @include pseudo;
-      top: 0;
+      top: -31px;
       left: 0;
-      width: 50px;
-      height: 50px;
+      width: 100px;
+      height: 100px;
     }
 
     &--slim::after {
       @include pseudo;
-      top: 0;
-      left: 7px;
-      width: 36px;
-      height: 50px;
+      top: -37px;
+      left: 14px;
+      width: 70px;
+      height: 97px;
       background-image: url("../img/icon-cat-slim.svg");
       background-repeat: no-repeat;
     }
-  
+
     &--pro::after {
       @include pseudo;
-      top: 10px;
-      left: -10px;
-      width: 67px;
-      height: 28px;
+      top: -11px;
+      left: -20px;
+      width: 134px;
+      height: 56px;
       background-image: url("../img/icon-cat-pro.svg");
       background-repeat: no-repeat;
     }
@@ -142,6 +148,7 @@
     padding-bottom: 31px;
     padding-top: 0;
     border: none;
+
     @include text(16px, 24px);
 
     &--pro {
@@ -150,7 +157,8 @@
   }
 
   @include desktop {
-    padding-bottom: 23px;
+    padding-top: 49px;
+    padding-bottom: 26px;
   }
 }
 
@@ -177,7 +185,7 @@
 
   @include tablets {
     @include text(20px, 30px);
-    
+
     &::after {
       @include pseudo;
       background: url("../img/icon-arrow.svg") no-repeat;
@@ -185,6 +193,19 @@
       height: 10px;
       top: 29px;
       right: -41px;
+    }
+  }
+
+  @include desktop {
+    padding-top: 0;
+
+    &::after {
+      @include pseudo;
+      background: url("../img/icon-arrow.svg") no-repeat;
+      width: 32px;
+      height: 10px;
+      top: 9px;
+      right: -44px;
     }
   }
 }

@@ -32,6 +32,10 @@
     border-bottom: none;
     padding-top: 44px;
   }
+
+  @include desktop {
+    padding-top: 36px;
+  }
 }
 
 .footer__social {
@@ -42,7 +46,7 @@
   }
 
   @include desktop {
-    padding: 33px 0 20px 0;
+    padding: 33px 0 28px 0;
   }
 }
 
