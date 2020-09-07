@@ -48,9 +48,6 @@
 
   @include tablets {
     display: grid;
-    //grid-template-columns: 246px 246px;
-    //grid-template-rows: 280px 280px;
-    //grid-row-gap: 37px;
     grid-template-columns: 1fr 1fr;
     grid-row-gap: 88px;
     grid-column-gap: 60px;
@@ -60,7 +57,6 @@
   @include desktop {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    //grid-template-rows: 280px;
     grid-column-gap: 75px;
     grid-row-gap: 40px;
     margin-bottom: 10px;
@@ -120,7 +116,6 @@
       width: 80px;
       height: 80px;
     }
-<<<<<<< HEAD
 
     &--functional-nutrition::before {
       background-image: url("../img/advantage-leaf-tablet.png");
@@ -141,27 +136,6 @@
       background-image: url("../img/advantage-libra-tablet.png");
       background-repeat: no-repeat;
     }
-=======
-      &--functional-nutrition::before {
-        background-image: url("../img/advantage-leaf-tablet.png");
-        background-repeat: no-repeat;
-      }
-  
-      &--fast-cook::before {
-        background-image: url("../img/advantage-powder-tablet.png");
-      background-repeat: no-repeat;
-    }
-  
-    &--equivalent::before {
-      background-image: url("../img/advantage-knife-tablet.png");
-      background-repeat: no-repeat;
-    }
-  
-    &--good-changes::before {
-      background-image: url("../img/advantage-libra-tablet.png");
-      background-repeat: no-repeat;
-    }
->>>>>>> b9c31ff75d3503071cf580ffc3da113e8258f4a9
   }
 
   &::after {

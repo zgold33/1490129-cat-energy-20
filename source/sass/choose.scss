@@ -31,8 +31,8 @@
 
   &::before {
     @include pseudo;
-    top: -7px;
-    left: 2px;
+    top: -6px;
+    left: 3px;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -41,8 +41,8 @@
 
   &--slim::after {
     @include pseudo;
-    top: -9px;
-    left: 9px;
+    top: -8px;
+    left: 10px;
     width: 36px;
     height: 50px;
     background-image: url("../img/icon-cat-slim.svg");
@@ -51,7 +51,7 @@
 
   &--pro::after {
     @include pseudo;
-    top: 3px;
+    top: 4px;
     left: -6px;
     width: 67px;
     height: 28px;
@@ -62,7 +62,7 @@
   @include tablets {
     padding-left: 0;
     padding-bottom: 0;
-    margin-bottom: 25px;
+    margin-bottom: 24px;
 
     @include text(36px, 36px);
 
@@ -138,7 +138,7 @@
 .choose__text {
   margin: 0;
   padding: 0;
-  padding-top: 5px;
+  padding-top: 7px;
   padding-bottom: 22px;
   border-bottom: 1px solid $color-border;
 
@@ -177,10 +177,10 @@
   &::after {
     @include pseudo;
     background: url("../img/icon-arrow.svg") no-repeat;
-    width: 32px;
-    height: 10px;
+    width: 24px;
+    height: 12px;
     top: 21px;
-    right: -33px;
+    right: -25px;
   }
 
   @include tablets {
@@ -189,10 +189,10 @@
     &::after {
       @include pseudo;
       background: url("../img/icon-arrow.svg") no-repeat;
-      width: 32px;
-      height: 10px;
+      width: 24px;
+      height: 12px;
       top: 29px;
-      right: -41px;
+      right: -33px;
     }
   }
 
@@ -202,10 +202,21 @@
     &::after {
       @include pseudo;
       background: url("../img/icon-arrow.svg") no-repeat;
-      width: 32px;
-      height: 10px;
+      width: 24px;
+      height: 12px;
       top: 9px;
       right: -44px;
     }
+  }
+
+  &:hover::after {
+    @include pseudo;
+    width: 32px;
+    height: 10px;
+    background: url("../img/icon-arrow-long.svg") no-repeat;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

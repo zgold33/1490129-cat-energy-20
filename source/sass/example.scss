@@ -15,7 +15,7 @@
 
 .example__wrapper {
   background-color: $color-bg-example;
-  padding-top: 33px;
+  padding-top: 35px;
   padding-bottom: 33px;
 
   @include tablets {
@@ -28,8 +28,8 @@
     display: flex;
     justify-content: space-between;
     border-top: none;
-    max-width: $desktop-width;
-    margin: 0 auto;
+    // max-width: $desktop-width;
+    // margin: 0 auto;
     margin-top: 25px;
     padding-bottom: 0;
   }
@@ -56,7 +56,7 @@
 
   @include tablets {
     @include text(60px, 60px);
-    margin-bottom: 31px;
+    margin-bottom: 30px;
     margin-top: 16px;
   }
 
@@ -82,8 +82,9 @@
   @include desktop {
     @include text(16px, 24px);
     margin-bottom: 69px;
-    padding-top: 38px;
+    padding-top: 35px;
     padding-right: 131px;
+    padding-left: 111px;
   }
 }
 
@@ -115,6 +116,12 @@
     justify-content: flex-start;
     margin-bottom: 55px;
   }
+
+  @include desktop {
+    width: 476px;
+    padding-left: 110px;
+  }
+
 }
 
 .example__column {
@@ -159,6 +166,7 @@
     @include text(14px, 14px);
     width: 139px;
     background-color: $color-bg-example;
+    padding-top: 2px;
   }
 }
 
@@ -207,6 +215,7 @@
   @include desktop {
     flex-direction: row;
     margin-top: 0;
+    padding-left: 110px;
   }
 }
 

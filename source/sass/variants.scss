@@ -1,5 +1,9 @@
 .variants__wrapper {
   margin-bottom: 27px;
+
+  @include tablets {
+    margin-bottom: 46px;
+  }
 }
 
 .variants__list {

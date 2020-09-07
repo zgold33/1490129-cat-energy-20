@@ -1,30 +1,116 @@
 .menu {
-    font-family: $title-font;
-    font-weight: 500;
-    display: none;
-  
-    @include text(20px, 20px);
-  
-    &--nojs {
-      display: block;
-    }
-  
-    &--opened {
-      display: block;
-    }
-  
-    @include tablets {
-      display: block;
-  
-      @include text(18px, 24px);
-      font-weight: 400;
-      flex-wrap: wrap;
-    }
-  
-    @include desktop {
-      display: block;
-  
-      @include text(20px, 30px);
+  font-family: $title-font;
+  font-weight: 500;
+  display: none;
+
+  @include text(20px, 20px);
+
+  &--nojs {
+    display: block;
+  }
+
+  &--opened {
+    display: block;
+  }
+
+  @include tablets {
+    display: block;
+
+    @include text(18px, 24px);
+    font-weight: 400;
+    flex-wrap: wrap;
+    margin-right: 30px;
+    padding-top: 20px;
+  }
+
+  @include desktop {
+    display: block;
+    margin-right: 0px;
+    padding-top: 47px;
+
+    @include text(20px, 30px);
+  }
+}
+
+.menu__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @include tablets {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.menu__item {
+
+  border-bottom: 1px solid $color-light-border;
+
+  @include tablets {
+    border: none;
+    margin-right: 36px;
+
+    &:last-child {
+      margin-right: 0;
     }
   }
-  
+
+  @include desktop {
+    border: none;
+    margin-right: 35px;
+  }
+}
+
+.menu__link {
+  display: flex;
+  justify-content: center;
+  padding: 22px 0 23px 0;
+  color: $color-title-dark;
+  text-transform: uppercase;
+
+  @include tablets {
+    &[href]:hover {
+      opacity: 0.6;
+    }
+
+    &[href]:active {
+      opacity: 0.3;
+    }
+
+    &--active {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 14px;
+        left: 0;
+        height: 2px;
+        background: $color-button;
+      }
+    }
+  }
+
+  &--style--light {
+    @include desktop {
+      color: $color-title-light;
+    }
+  }
+
+  @include desktop {
+    &--active.menu__link--style--light {
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 14px;
+        left: 0;
+        height: 2px;
+        background: $color-title-light;
+      }
+    }
+  }
+}
+

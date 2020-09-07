@@ -1,18 +1,40 @@
 .copyright__name {
+  display: flex;
+  padding-top: 2px;
+
+  justify-content: space-between;
+  align-items: center;
+
+  @include text(16px, 18px);
   color: $color-devobs;
 
-  @include tablets {
-    padding-right: 22px;
-    padding-top: 19px;
+  &:active {
+    opacity: 0.3;
   }
 
-  @include desktop {
-    padding-top: 15px;
+  &:hover .copyright__logo {
+    fill: $color-button;
+  }
+
+  &:active .copyright__logo {
+    fill: $color-button;
+    opacity: 0.3;
+  }
+
+  @include tablets {
+    width: 164px;
   }
 }
 
 .copyright__logo {
+  display: flex;
+  width: 27px;
+  height: 34px;
+  fill: $color-social-link;
+
   @include tablets {
-    padding-top: 21px;
+    width: 27px;
+    height: 34px;
+    margin-left: 23px;
   }
 }

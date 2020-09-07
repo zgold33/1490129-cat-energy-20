@@ -12,18 +12,18 @@
   }
 
   @include tablets {
-    padding-top: 12px;
+    padding-top: 16px;
   }
 
   @include desktop {
-    padding-top: 18px;
+    padding-top: 23px;
   }
 }
 
 .footer__logo {
   display: flex;
   padding-top: 39px;
-  padding-bottom: 31px;
+  padding-bottom: 27px;
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid $color-border;
@@ -35,6 +35,14 @@
 
   @include desktop {
     padding-top: 36px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }
 
@@ -51,17 +59,17 @@
 }
 
 .footer__copyright {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   border-top: 1px solid $color-border;
   padding-top: 20px;
   padding-bottom: 30px;
 
   @include tablets {
     border-top: none;
-    display: flex;
-    justify-content: flex-end;
+    padding-top: 35px;
+  }
+
+  @include desktop {
+    padding-top: 36px;
   }
 }
 
@@ -133,8 +141,8 @@
 
   @include tablets {
     margin-top: -6px;
-    width: 13px;
-    height: 27px;
+    width: 28px;
+    height: 33px;
   }
 
   @include desktop {
@@ -143,7 +151,7 @@
 }
 
 .footer-social__network-link {
-  fill: $color-social-link
+  fill: $color-social-link;
 
   &:hover,
   &:focus {

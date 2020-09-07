@@ -58,6 +58,13 @@ $track-radius: 3px;
   appearance: none;
 }
 
+.slider {
+
+  @include desktop {
+    padding-right: 110px;
+  }
+}
+
 .slider__wrapper {
   @include tablets {
     margin-top: 26px;
@@ -214,6 +221,7 @@ $track-radius: 3px;
 
   @include desktop {
     padding-left: 6px;
+    padding-top: 3px;
   }
 }
 
@@ -224,6 +232,13 @@ $track-radius: 3px;
   @include tablet {
     width: 54px;
     margin-right: 0;
+    position: relative;
+    transform: translateX(118%);
+  }
+
+  @include desktop {
+    position: relative;
+    transform: translateX(0%);
   }
 }
 
@@ -234,6 +249,13 @@ $track-radius: 3px;
   @include tablet {
     width: 59px;
     margin-left: 0;
+    position: relative;
+    transform: translateX(-110%);
+  }
+
+  @include desktop {
+    position: relative;
+    transform: translateX(0%);
   }
 }
 
