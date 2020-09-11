@@ -19,6 +19,7 @@ body {
     margin: 0 auto;
     max-width: 1220px;
     padding: 0;
+    width: 100%;
   }
 }
 
@@ -106,6 +107,18 @@ a {
     padding: 10px 5px;
     margin-left: 20px;
     margin-right: 20px;
+  }
+
+  &--catalog {
+    @include text(16px, 20px);
+    padding: 10px 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  &--catalog-additional {
+    @include text(16px, 20px);
+    padding: 10px 5px;
   }
 
   &--size--form {

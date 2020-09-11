@@ -13,6 +13,13 @@
   }
 }
 
+.example__content {
+
+  @include desktop {
+    width: 437px;
+  }
+}
+
 .example__wrapper {
   background-color: $color-bg-example;
   padding-top: 35px;
@@ -83,8 +90,8 @@
     @include text(16px, 24px);
     margin-bottom: 69px;
     padding-top: 35px;
-    padding-right: 131px;
-    padding-left: 111px;
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 
@@ -94,7 +101,7 @@
   @include tablets {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 0;
+    margin-bottom: 26px;
   }
 
   @include desktop {
@@ -119,7 +126,7 @@
 
   @include desktop {
     width: 476px;
-    padding-left: 110px;
+    padding-left: 0;
   }
 
 }
@@ -215,7 +222,7 @@
   @include desktop {
     flex-direction: row;
     margin-top: 0;
-    padding-left: 110px;
+    padding-left: 0;
   }
 }
 
@@ -227,5 +234,15 @@
   @include desktop {
     margin-top: 0;
     margin-left: 63px;
+  }
+}
+
+.example_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include desktop {
+    flex-direction: row;
   }
 }

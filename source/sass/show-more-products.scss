@@ -2,6 +2,12 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  padding-bottom: 24px;
+  border-bottom: 1px solid $color-light-border;
+
+  @include tablets {
+    padding-bottom: 0;
+  }
 }
 
 .show-more-products__wrapper {
@@ -11,10 +17,11 @@
   justify-content: flex-end;
   border-top: 1px solid $color-light-border;
 
-  @media (min-width: $tablet-width) {
+  @include tablets {
     border: 1px solid $color-bg;
     min-height: 430px;
     padding: 0;
+    margin-top: 77px;
   }
 }
 
@@ -42,7 +49,7 @@
     background: url("../img/big-plus.svg");
   }
 
-  @media (min-width: $tablet-width) {
+  @include tablets {
     align-self: center;
     text-align: center;
     width: 135px;
@@ -69,7 +76,7 @@
   @include text(12px, 16px);
   text-align: center;
 
-  @media (min-width: $tablet-width) {
+  @include tablets {
     align-self: center;
     text-align: center;
     width: 170px;
@@ -80,11 +87,11 @@
 }
 
 .show-more-products__link {
-  @media (min-width: $tablet-width) {
+  @include tablets {
     margin: 0 38px 36px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     margin: 0 38px 38px;
   }
 }

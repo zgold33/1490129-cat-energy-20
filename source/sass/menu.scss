@@ -44,8 +44,15 @@
 }
 
 .menu__item {
-
   border-bottom: 1px solid $color-light-border;
+
+  &:first-child {
+    border-top: 1px solid $color-light-border;
+
+    @include tablets {
+    border: none;
+    }
+  }
 
   @include tablets {
     border: none;

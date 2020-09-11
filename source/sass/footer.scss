@@ -84,7 +84,7 @@
 
   @include tablets {
     margin-right: 28px;
-    margin-left: 45px;
+    margin-left: 60px;
   }
 }
 
@@ -96,7 +96,7 @@
   }
 
   @include tablets {
-    margin-right: 28px;
+    margin-right: 24px;
   }
 }
 
@@ -123,13 +123,12 @@
   height: 16px;
 
   @include tablets {
-    margin-top: -4px;
+    margin-top: 4px;
     width: 23px;
     height: 23px;
   }
 
   @include desktop {
-    margin-top: 0;
     width: 23px;
     height: 23px;
   }

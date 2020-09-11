@@ -11,7 +11,9 @@
     display: flex;
     flex-direction: column;
     border: 1px solid $color-border-additional;
-    padding: 25px 37px 27px 37px;
+    padding: 25px 36px 27px 37px;
+    margin-left: 10px;
+    margin-right: 10px;
     margin-top: -1px;
   }
 
@@ -51,6 +53,7 @@
 }
 
 .additional-card__row {
+
   @include tablets {
     display: flex;
     justify-content: space-between;
@@ -126,6 +129,6 @@
 .additional-card__link {
   @include desktop {
     width: 244px;
-    margin-left: auto;
+    margin-left: 14px;
   }
 }

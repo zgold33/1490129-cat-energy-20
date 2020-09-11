@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: flex-end;
     padding-bottom: 40px;
-    padding-left: 30px;
+    // padding-left: 30px;
   }
 }
 
@@ -13,15 +13,16 @@
   display: flex;
   justify-content: center;
   // align-items: center;
-  // padding: 0 20px;
+  padding-left: 20px;
   border-top: 1px solid $color-light-border;
 
   @include tablets {
     flex-direction: column;
     border: none;
     padding: 0;
-    padding-right: 37px;
-    padding-left: 6px;
+    padding-left: 0;
+    // padding-right: 37px;
+    // padding-left: 6px;
   }
 }
 
@@ -29,16 +30,20 @@
   // display: flex;
   justify-content: center;
   align-items: center;
-  // width: 140px;
+  // padding-left: 20px;
 
   @include tablets {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    padding-bottom: 28px;
-    width: 168px;
+    padding-bottom: 14px;
+    width: 324px;
   }
 
   @include desktop {
-    padding-bottom: 46px;
+    padding-bottom: 16px;
+    width: 245px;
   }
 }
 
@@ -55,13 +60,19 @@
   @include desktop {
     width: 245px;
 
-    object-fit: contain;
+    object-fit: none;
   }
 }
 
 .item-card__info {
   flex-grow: 1;
-  margin-top: 9px;
+  margin-top: 22px;
+  padding-right: 20px;
+
+  @include tablets {
+    padding-right: 39px;
+    padding-left: 37px;
+  }
 }
 
 .item-card__title {
@@ -77,9 +88,7 @@
   @include tablets {
     @include text(20px, 24px);
     width: 140px;
-    align-self: center;
     text-align: center;
-    padding-left: 4px;
     margin-top: 0;
   }
 
@@ -110,11 +119,11 @@
   padding-top: 11px;
   margin-left: -2px;
 
-  @media (min-width: $tablet-width) {
+  @include tablets {
     margin-bottom: 31px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     padding-top: 15px;
   }
 }
@@ -125,14 +134,14 @@
   @include text(12px, 15px);
   color: $color-devobs;
 
-  @media (min-width: $tablet-width) {
+  @include tablets {
     border-bottom: 1px solid $color-border-additional;
 
     @include text(17px, 17px);
     padding: 6px 0;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     border-bottom: 1px solid $color-border-additional;
 
     @include text(17px, 17px);
@@ -154,11 +163,11 @@
   text-align: right;
   margin-right: -4px;
 
-  @media (min-width: $tablet-width) {
+  @include tablets {
     margin-right: -5px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     margin-right: -3px;
   }
 }
@@ -167,7 +176,7 @@
   // margin: 0 20px 0;
   margin-bottom: 24px;
 
-  @media (min-width: $tablet-width) {
-    margin: 0 36px 0 10px;
+  @include tablets {
+    margin: 0 37px 0 39px;
   }
 }
