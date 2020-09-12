@@ -11,19 +11,16 @@ $max-screen-width: 1300px;
 }
 
 @mixin tablet {
-  @media (min-width: $breakpoint-tablet) {
-    // min-width: 768
+  @media (min-width: $breakpoint-tablet) { // min-width: 768
     @content;
   }
 }
 
 @mixin desktop {
-  @media (min-width: $breakpoint-desktop) {
-    // min-width: 1220
+  @media (min-width: $breakpoint-desktop) { // min-width: 1220
     @content;
   }
 }
-
 //--------------range----------------
 $track-color: #dcdcdc;
 $thumb-color: #68b738;
@@ -97,7 +94,6 @@ $track-radius: 3px;
   @include tablet {
     display: block;
   }
-
   width: $track-width;
   appearance: none;
 
@@ -189,9 +185,9 @@ $track-radius: 3px;
   font-weight: normal;
   color: $color-title-dark;
 
-  @include text(16px, 20px);
+  @include text(16px, 20px)
 
-  @include tablet {
+    @include tablet {
     font-size: 20px;
     padding-bottom: 5px;
     padding-top: 6px;
@@ -330,7 +326,7 @@ $track-radius: 3px;
   transition: width 0.3s;
 }
 
-.slider__checkbox:checked+.slider__checkbox-label::after {
+.slider__checkbox:checked + .slider__checkbox-label::after {
   right: 6px;
   left: initial;
 }
