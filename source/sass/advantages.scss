@@ -161,4 +161,10 @@
 
     padding-top: 2px;
   }
+
+  @include desktop {
+    flex-direction: column;
+
+    padding-top: 2px;
+  }
 }
