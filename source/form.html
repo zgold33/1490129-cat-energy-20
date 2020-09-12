@@ -4,11 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/styles.min.css">
   <title>HTML academy: Cat energy. Form page</title>
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
 </head>
 
-<body class="page__body">
+<body class="page">
 
   <svg style="display: none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <symbol id="icon-vk" viewBox="0 0 23 16">
@@ -22,14 +24,14 @@
         fill='%23666' />
     </symbol>
     <symbol id="icon-fb" viewBox="0 0 22 22">
-      <path
-        d='M16.5 1.833h-2.75a4.63 4.63 0 00-3.24 1.317 4.45 4.45 0 00-1.343 3.177v2.697h-2.75v3.595h2.75v7.191h3.666v-7.19h2.75l.917-3.596h-3.667V6.327a.89.89 0 01.269-.635.926.926 0 01.648-.263h2.75V1.833z'
-        stroke='%23666' stroke-width='1.1' stroke-linecap='round' stroke-linejoin='round' />
+      <path d="M7.1,19H2v-8.8H0V5.8h1.9C1.8,3.8,2.1,2.4,3,1.4C3.8,0.5,5,0.1,6.5,0H10v4.2H7.2C7.1,4.4,7,5,7,5.8h3v4.4H7.1V19z M3.1,18
+      h2.8V9.1h2.9V6.8H5.9V6.3c0-1.4,0-2.6,0.7-3.1l0.1-0.1h2.1V1H6.5c-1.2,0.1-2,0.4-2.6,1c-0.8,0.8-1,2.3-0.8,4.2l0.1,0.6H1.1v2.3h2V18
+      z" />
     </symbol>
     <symbol id="icon-htmlacademy" viewBox="0 0 27 34">
       <path
         d='M13.643.016L13.5 0 0 1.407v24.606L13.5 34 27 26.013V1.407L13.643.016zm11.591 25L13.5 31.956 1.766 25.015V14.93l11.685 6.916.02 1.253-8.017-4.743-.011 1.225 8.046 4.809.02 1.286-8.045-4.758-.01 1.226L13.5 26.95l8.124-4.833V16.91l3.62-2.15-.01 10.256zm0-11.564l-3.22 1.88-1.482.875-7.065-4.187-.011 1.225 6.04 3.573-.053.031-.13.076-.86.492-4.986-2.948-.011 1.225 3.936 2.328-.933.61-.021.012-2.971-1.742-.011 1.225 1.947 1.135-1.988 1.186-11.618-6.872 11.638-6.958 11.8 6.834zm0-1.225L13.44 5.31 1.766 12.22V2.99L13.5 1.764 25.234 2.99v9.237z'
-        fill='%23666' /%3E%3C/svg%3E />
+        fill='%23666'/>
     </symbol>
     <symbol id="icon-mail" viewBox="0 0 17 13">
       <path
@@ -57,7 +59,7 @@
         <span></span>
       </button>
     </div>
-    <nav class="header__bottom menu menu--nojs">
+    <nav class="page-header__bottom menu menu--nojs">
       <ul class="menu__list">
         <li class="menu__item">
           <a class="menu__link" href="index.html">Главная</a>
@@ -216,35 +218,36 @@
           <p class="contacts__addres">ул. Большая<br>Конюшенная, д. 19/8<br><span>Санкт-Петербург</span></p>
         </div>
       </div>
-      <div id="map" class="map">
+      <div id="map" class="map map-bg">
         <h2 class="visually-hidden">Расположение магазина на карте</h2>
       </div>
     </section>
     <section class="footer__wrapper container">
+      <h2 class=visually-hidden>Футер сайта</h2>
       <div class="footer__logo">
         <a class="footer__link">
           <img src="img/footer-logo.svg" alt="Логотип Cat Energy" width="128" height="24">
         </a>
       </div>
-      <div class="footer__social">
-        <ul class="footer__social-list">
-          <li class="footer__social-item">
-            <a class="footer-social__network-link" href="#" aria-label="Сcылка на В контакте">
+      <div class="footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__network-link" href="#" aria-label="Сcылка на В контакте">
               <svg class="social__logo social__logo--vk" width="23" height="16">
                 <use xlink:href="#icon-vk"></use>
               </svg>
             </a>
           </li>
-          <li class="footer__social-item">
-            <a class="footer-social__network-link" href="#" title="Сcылка на наш Инстраграм">
+          <li class="social__item">
+            <a class="social__network-link" href="#" title="Сcылка на наш Инстраграм">
               <span class="visually-hidden">Instagram</span>
               <svg class="social__logo social__logo--insta" width="16" height="16">
                 <use xlink:href="#icon-insta"></use>
               </svg>
             </a>
           </li>
-          <li class="footer__social-item">
-            <a class="footer-social__network-link" href="#" title="Сcылка на нашу страницу Фэйсбук">
+          <li class="social__item">
+            <a class="social__network-link" href="#" title="Сcылка на нашу страницу Фэйсбук">
               <span class="visually-hidden">Facebook</span>
               <svg class="social__logo social__logo--fb" width="22" height="22">
                 <use xlink:href="#icon-fb"></use>

@@ -51,7 +51,7 @@ exports.server = server;
 
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch("source/*.html", gulp.series("html")).on("change", sync.reload);
 }
 
 // Images
@@ -119,9 +119,9 @@ const createWebp = () =>
       return gulp.src([
       "source/*.html"
       ], {
-       base: "source"
-       })
-       .pipe(gulp.dest("build"));
+        base: "source"
+        })
+        .pipe(gulp.dest("build"));
       };
 
     exports.html = html

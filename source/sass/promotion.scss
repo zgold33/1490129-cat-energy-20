@@ -1,3 +1,11 @@
+.promotion {
+
+  @include desktop {
+    margin-top: 16px;
+    margin-left: -13px;
+  }
+}
+
 .promotion__wrapper {
   display: flex;
   justify-content: center;
@@ -23,8 +31,8 @@
   @include desktop {
     min-height: 289px;
     background-image: url("../img/gift-photo-desktop.jpg");
-    margin-left: 16px;
-    margin-top: 17px;
+    // margin-left: 16px;
+    // margin-top: 17px;
     margin-bottom: 0;
   }
 }

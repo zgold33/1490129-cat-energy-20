@@ -21,7 +21,11 @@
     border: 1px solid $color-bg;
     min-height: 430px;
     padding: 0;
-    margin-top: 77px;
+    margin-top: 85px;
+  }
+
+  @include desktop {
+    margin-top: 80px;
   }
 }
 

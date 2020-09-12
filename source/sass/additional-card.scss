@@ -22,6 +22,7 @@
     padding: 15px 0 16px 0;
     border: none;
     margin-top: 0;
+    margin-left: 0;
     border-top: 1px solid $color-border-additional;
 
     &:last-child {
@@ -53,7 +54,6 @@
 }
 
 .additional-card__row {
-
   @include tablets {
     display: flex;
     justify-content: space-between;

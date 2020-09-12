@@ -2,12 +2,11 @@
 
   @include tablets {
     padding-right: 30px;
-    padding-left: 30px;
+    padding-left: 0;
   }
 
   @include desktop {
-    padding-right: 110px;
-    padding-left: 110px;
+    padding-left: 0;
   }
 }
 
@@ -58,5 +57,6 @@
     grid-column-gap: 80px;
     grid-row-gap: 63px;
     margin: 0 auto;
+    padding-top: 44px;
   }
 }

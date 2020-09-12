@@ -60,15 +60,19 @@ $track-radius: 3px;
 
 .slider {
 
+  @include tablets {
+  }
+
   @include desktop {
     width: 690px;
     position: relative;
-    top: 3px;
-    left: -4px;
+    top: 4px;
+    left: 93px;
   }
 }
 
 .slider__wrapper {
+  position: relative;
 
   @include tablets {
 
@@ -76,46 +80,17 @@ $track-radius: 3px;
       content: "";
       display: block;
       position: absolute;
-      height: 93%;
-      left: 59%;
+      height: 73%;
+      left: 0;
       bottom: 0;
+      width: 100%;
       background: $color-bg-example;
     }
   }
 
   @include desktop {
     margin-top: -227px;
-  }
-}
-
-.slider__img--before {
-
-  @include tablets {
-    background: linear-gradient($color-title-light 169px, $color-bg-example 169px 100%);
-    margin-right: 0;
-    margin-left: 0;
-    display: block;
-    width: 85%;
-    height: 517px;
-    padding-left: 0;
-    padding-right: 0;
-    object-fit: none;
-    object-position: 0 0;
-    padding-left: 15px;
-  }
-
-  @include desktop {
-    // background: linear-gradient($color-title-light 37.5%, $color-bg 37.5% 100%);
-    background: none;
-    display: block;
-    width: 100%;
-    height: 516px;
-    object-fit: none;
-    object-position: 0 0;
-    // padding-left: 0;
-    // padding-top: 4px;
-    margin-top: -24px;
-    padding-left: 45px;
+    height: 164%;
   }
 }
 
@@ -207,13 +182,6 @@ $track-radius: 3px;
   }
 }
 
-//--------------slider----------------
-.slider__pictures {
-  position: relative;
-  // display: flex;
-  // height: 517px;
-}
-
 .slider__button {
   width: 50px;
   border: none;
@@ -235,6 +203,10 @@ $track-radius: 3px;
     padding-left: 3px;
     padding-right: 3px;
     border-bottom: 1px dotted rgba(17, 17, 17, 0.23);
+
+    &:hover {
+      border-bottom: 1px solid $color-slide-underline-hover;
+    }
   }
 
   @include desktop {
@@ -285,6 +257,7 @@ $track-radius: 3px;
     width: 428px;
     margin-left: 21px;
     margin-right: 19px;
+    z-index: 1;
   }
 
   @include desktop {
@@ -312,9 +285,10 @@ $track-radius: 3px;
     padding-left: 1px;
     padding-top: 14px;
     padding-bottom: 68px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 60px;
+    padding-right: 60px;
     background: $color-bg-example;
+    position: relative;
   }
 
   @include desktop {
@@ -375,19 +349,35 @@ $track-radius: 3px;
   // display: none;
 }
 
+.slider__pictures {
+  position: relative;
+
+  @include tablets {
+    display: block;
+    // justify-content: center;
+    text-align: center;
+    width: 690px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .slider__picture {
+  text-align: center;
 
   &--before {
     position: relative;
-    width: 113%;
+    width: 100%;
     z-index: 1;
-    right: 19px;
+    right: 0;
 
     @include tablets {
       position: relative;
-      width: 59%;
+      width: 87%;
       z-index: 1;
       right: 0;
+      // background: linear-gradient($color-title-light 36.5%, $color-bg-example 29.5% 100%); скрыть кота
+      // margin: 0 auto;
     }
 
     @include desktop {
@@ -395,24 +385,23 @@ $track-radius: 3px;
       right: 0;
       height: 100%;
       background: linear-gradient($color-title-light 36.5%, $color-bg-example 29.5% 100%);
-}
+    }
   }
 
   &--after {
-    // position: absolute;
-    // right: -96px;
-    // z-index: 0;
-    // left: 0px;
+    position: absolute;
+    opacity: 0;
     display: flex;
     top: 0;
-    width: 50%;
+    width: 100%;
     overflow: hidden;
     height: 100%;
 
     @include tablets {
+      opacity: 100%;
       display: flex;
       top: 0;
-      width: 50%;
+      width: 90%;
       overflow: hidden;
       height: 100%;
     }
@@ -420,17 +409,46 @@ $track-radius: 3px;
     @include desktop {
       height: 100%;
       background: linear-gradient($color-title-light 36.5%, $color-bg-example 29.5% 100%);
+    }
+  }
 }
 
+.slider__img--before {
+
+  @include tablets {
+    // background: linear-gradient($color-title-light 169px, $color-bg-example 169px 100%);
+    margin-right: 0;
+    margin-left: 0;
+    display: block;
+    width: 57%;
+    height: 517px;
+    padding-left: 8px;
+    padding-right: 0;
+    object-fit: none;
+    object-position: 0 0;
+    // padding-left: 15px;
+  }
+
+  @include desktop {
+    // background: linear-gradient($color-title-light 37.5%, $color-bg 37.5% 100%);
+    background: none;
+    display: block;
+    width: 100%;
+    height: 516px;
+    object-fit: none;
+    object-position: 0 0;
+    // padding-left: 0;
+    // padding-top: 4px;
+    margin-top: -24px;
+    padding-left: 45px;
   }
 }
 
 .slider__img--after {
-
   @include tablets {
     position: absolute;
     top: 0;
-    background: linear-gradient($color-title-light 169px, $color-bg-example 169px 100%);
+    // background: linear-gradient($color-title-light 169px, $color-bg-example 169px 100%);
     margin-right: 0;
     margin-left: 0;
     display: block;
@@ -438,9 +456,10 @@ $track-radius: 3px;
     height: 517px;
     padding-left: 0;
     padding-right: 0;
-    object-fit: none;
-    object-position: 0 0;
-    padding-left: 16px;
+    margin-left: 45px;
+    // object-fit: none;
+    // object-position: 0 0;
+    // padding-left: 16px;
   }
 
   @include desktop {
@@ -452,222 +471,6 @@ $track-radius: 3px;
     object-fit: none;
     object-position: 0 0;
     margin-top: 1px;
-    padding-left: 45px;
+    padding-left: 0;
   }
 }
-
-
-// .slider__list {
-//   margin-bottom: 31px;
-
-//   @media (min-width: $tablet-width) {
-//     position: relative;
-//     display: block;
-//     width: 690px;
-//     text-align: center;
-//     margin-left: auto;
-//     margin-right: auto;
-//     margin-bottom: 15px;
-//   }
-
-//   //Десктоп без разделения слайдов с градиентом
-//   @media (min-width: $desktop-width) {
-//     position: relative;
-//     display: inline-block;
-//     width: 100%;
-//     max-width: 690px;
-//     overflow: hidden;
-//     margin: 0 0 36px 0;
-//   }
-// }
-
-// .slider__container-before {
-//   @media (min-width: $tablet-width) {
-//     position: absolute;
-//     width: 50%;
-//     overflow: hidden;
-//     object-fit: none;
-//   }
-
-//   @media (min-width: $desktop-width) {
-//     position: absolute;
-//     width: 53%;
-//     overflow: hidden;
-//     object-fit: none;
-//   }
-
-//   // перестроение для градиентного десктопа
-//   @media (min-width: $desktop-width) {
-//     height: 100%;
-//   }
-// }
-
-// .slider__before {
-//   display: block;
-
-//   margin-right: auto;
-//   margin-left: auto;
-
-//   @media (min-width: $tablet-width) {
-//     margin-right: 0;
-//     margin-left: 0;
-//     display: block;
-//     width: 100%;
-//     height: 517px;
-//     object-fit: none;
-//     object-position: 0 0;
-//   }
-
-//   @media (min-width: $desktop-width) {
-//     display: block;
-//     width: 100%;
-//     height: 517px;
-//     object-fit: none;
-//     object-position: 0 0;
-//   }
-
-//   // перестроение для градиентного десктопа
-//   @media (min-width: $desktop-width) {
-//     height: 100%;
-//     background: linear-gradient($color-title-light 29.5%, $color-bg 29.5% 100%);
-//   }
-// }
-
-// .slider__after {
-//   display: none;
-
-//   margin-right: auto;
-//   margin-left: auto;
-
-//   @media (min-width: $tablet-width) {
-//     display: block;
-//     margin-left: 0;
-//     margin-right: 0;
-//     width: 100%;
-//     height: 517px;
-//     object-fit: none;
-//     object-position: 0 0;
-//   }
-
-//   @media (min-width: $desktop-width) {
-//     margin-left: 0;
-//     margin-right: 0;
-//     width: 100%;
-//     height: 517px;
-//   }
-// }
-
-// .slider__toggles {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-
-//   @media (min-width: $tablet-width) {
-//     margin-top: 0;
-//   }
-
-//   @media (min-width: $desktop-width) {
-//     margin-left: 39px;
-//   }
-
-//   // перестроение для градиентного десктопа
-//   @media (min-width: $desktop-width) {
-//     position: absolute;
-//     bottom: 41px;
-//     left: 43px;
-//     z-index: 100;
-//   }
-// }
-
-// .slider__toggle {
-//   margin: 0;
-//   padding: 0;
-//   border: none;
-//   background-color: transparent;
-//   font-family: $title-font;
-//   font-weight: normal;
-//   color: $color-title-dark;
-//   text-transform: uppercase;
-//   text-align: center;
-
-//   @include text(16px, 20px);
-
-//   @media (min-width: $tablet-width) {
-//     margin-right: 0;
-//     padding: 0;
-//     border-bottom: 1px dotted $color-slide-underline;
-
-//     &:hover {
-//       border-bottom: 1px solid $color-slide-underline-hover;
-//     }
-//   }
-
-//   &--before {
-//     margin-right: 15px;
-//     margin-left: 8px;
-
-//     @media (min-width: $tablet-width) {
-//       margin-right: 25px;
-//       margin-left: -3px;
-//     }
-//   }
-
-//   &--after {
-//     margin-left: 20px;
-//   }
-
-//   @media (min-width: $tablet-width) {
-//     @include text(20px, 30px);
-//   }
-// }
-
-// .slider__range {
-//   position: relative;
-//   width: 84px;
-//   height: 14px;
-//   border-radius: 6px;
-//   border: 1px solid $color-border-additional;
-//   background-color: $color-title-light;
-//   padding: 3px 6px;
-
-//   @media (min-width: $tablet-width) {
-//     width: 428px;
-//     height: 6px;
-//     border-radius: 6px;
-//     border: none;
-//     background-color: $color-bg-range;
-//     padding: 0 6px;
-//   }
-// }
-
-// .slider__control {
-//   position: absolute;
-//   width: 35px;
-//   height: 6px;
-//   border-radius: 6px;
-//   background-color: $color-button;
-//   cursor: pointer;
-
-//   @media (min-width: $tablet-width) {
-//     position: absolute;
-//     top: -12px;
-//     left: 47%;
-//     width: 32px;
-//     height: 32px;
-//     border-radius: 50%;
-//     background-color: $color-button;
-//     border: 12px solid $color-title-light;
-//     box-shadow: 0 0 0 1px $color-border-hover,
-//       0 1px 3px $color-shadow-range;
-
-//     &:hover {
-//       box-shadow: 0 0 0 1px $color-border-hover,
-//         0 2px 4px $color-shadow-range-hover;
-//     }
-
-//     &:active {
-//       box-shadow: 0 0 0 1px $color-button,
-//         0 3px 5px $color-shadow-range-active;
-//     }
-//   }
-// }

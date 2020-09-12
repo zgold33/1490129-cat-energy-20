@@ -26,7 +26,7 @@
   @include tablets {
 
     justify-content: space-between;
-    padding: 5px 41px 39px 41px;
+    padding: 5px 41px 43px 41px;
   }
 
   @include desktop {
@@ -80,27 +80,5 @@
   @include desktop {
     text-align: left;
     padding-top: 0;
-  }
-}
-
-.contacts__map {
-  position: relative;
-  background-color: $color-bg-example;
-  background-image: url("../img/map-pin.png"), url("../img/bg-map-mobile.png");
-  background-repeat: no-repeat, no-repeat;
-  background-size: 57px 53px, cover;
-  background-position: center, center;
-  //min-width: 320px;
-  min-height: 362px;
-
-  @include tablets {
-    min-height: 400px;
-    background-image: url("../img/map-pin.png"), url("../img/bg-map-tablet.png");
-  }
-
-  @include desktop {
-    min-height: 400px;
-    background-image: url("../img/map-pin.png"), url("../img/bg-map-desktop.png");
-    background-position: 75% 60%, center;
   }
 }
