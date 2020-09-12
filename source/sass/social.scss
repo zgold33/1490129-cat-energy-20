@@ -14,14 +14,14 @@
 }
 
 .social__item {
-  margin-right: 35px;
+  margin-right: 37px;
 
   &:last-child {
     margin-right: 3px;
   }
 
   @include tablets {
-    margin-right: 24px;
+    margin-right: 28px;
   }
 
   @include desktop {
@@ -34,7 +34,7 @@
   height: 16px;
 
   @include tablets {
-    margin-top: -1px;
+    margin-top: 5px;
     width: 30px;
     height: 22px;
   }
@@ -66,9 +66,10 @@
 .social__logo--fb {
   width: 22px;
   height: 22px;
+  margin-top: -2px;
 
   @include tablets {
-    margin-top: -6px;
+    margin-top: 2px;
     width: 28px;
     height: 33px;
   }

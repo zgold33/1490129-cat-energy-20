@@ -15,7 +15,6 @@
 .item-card__wrapper {
   display: flex;
   justify-content: center;
-  padding-left: 20px;
   border-top: 1px solid $color-light-border;
 
   @include tablets {

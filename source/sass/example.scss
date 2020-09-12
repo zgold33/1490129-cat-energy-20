@@ -22,8 +22,9 @@
 
   @include desktop {
     padding: 0;
-    padding-left: 110px;
+    // padding-left: 110px;
     width: 545px;
+    padding-left: 9px;
   }
 }
 
@@ -95,7 +96,7 @@
     @include text(16px, 24px);
     margin-bottom: 69px;
     padding-top: 35px;
-    padding-right: 0;
+    padding-right: 97px;
     padding-left: 0;
   }
 }
@@ -249,5 +250,7 @@
   @include desktop {
     flex-direction: row;
     padding: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
