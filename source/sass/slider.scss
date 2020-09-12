@@ -53,16 +53,10 @@ $track-radius: 3px;
   background: $thumb-color;
   cursor: pointer;
   box-sizing: border-box;
-  -moz-appearance: none;
-  -webkit-appearance: none;
   appearance: none;
 }
 
 .slider {
-
-  @include tablets {
-  }
-
   @include desktop {
     width: 690px;
     position: relative;
@@ -75,7 +69,6 @@ $track-radius: 3px;
   position: relative;
 
   @include tablets {
-
     &::before {
       content: "";
       display: block;
@@ -102,8 +95,6 @@ $track-radius: 3px;
     display: block;
   }
   width: $track-width;
-  -moz-appearance: none;
-  -webkit-appearance: none;
   appearance: none;
 
   &:focus {
@@ -282,7 +273,6 @@ $track-radius: 3px;
 
   @include tablet {
     width: auto;
-    padding-left: 1px;
     padding-top: 14px;
     padding-bottom: 68px;
     padding-left: 60px;
@@ -414,7 +404,6 @@ $track-radius: 3px;
 }
 
 .slider__img--before {
-
   @include tablets {
     // background: linear-gradient($color-title-light 169px, $color-bg-example 169px 100%);
     margin-right: 0;
@@ -450,11 +439,9 @@ $track-radius: 3px;
     top: 0;
     // background: linear-gradient($color-title-light 169px, $color-bg-example 169px 100%);
     margin-right: 0;
-    margin-left: 0;
     display: block;
     width: 100%;
     height: 517px;
-    padding-left: 0;
     padding-right: 0;
     margin-left: 45px;
     // object-fit: none;
