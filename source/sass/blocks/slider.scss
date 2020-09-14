@@ -87,92 +87,6 @@ $track-radius: 3px;
   }
 }
 
-.range {
-  display: none;
-  background: transparent;
-
-  @include tablet {
-    display: block;
-  }
-  width: $track-width;
-  appearance: none;
-
-  &:focus {
-    outline: none;
-  }
-
-  &::-webkit-slider-runnable-track {
-    @include track();
-    background: $track-color;
-    border-radius: $track-radius;
-    border: $track-border-width solid $track-border-color;
-  }
-
-  &::-webkit-slider-thumb {
-    @include thumb();
-    margin-top: ((-$track-border-width * 2 + $track-height) / 2) - ($thumb-height / 2);
-  }
-
-  //----------------------------------
-
-  &:focus::-webkit-slider-thumb,
-  &:hover::-webkit-slider-thumb {
-    box-shadow:
-      0 0 0 1px rgba(0, 0, 0, 0.15),
-      0 2px 5px 1px rgba(0, 0, 0, 0.15),
-      0 3px 5px 1px rgba(0, 0, 0, 0.15),
-      0 4px 5px 1px rgba(0, 0, 0, 0.15);
-  }
-
-  &:active::-webkit-slider-thumb {
-    box-shadow:
-      0 0 0 2px $thumb-color,
-      0 2px 5px 1px rgba(0, 0, 0, 0.15),
-      0 3px 5px 1px rgba(0, 0, 0, 0.15),
-      0 4px 5px 1px rgba(0, 0, 0, 0.15);
-  }
-
-  //--------------------------------
-
-  &::-moz-range-track {
-    @include track();
-    background: $track-color;
-    border-radius: $track-radius;
-    border: $track-border-width solid $track-border-color;
-  }
-
-  &::-moz-range-thumb {
-    @include thumb();
-  }
-
-  &::-ms-track {
-    @include track();
-    background: transparent;
-    border-color: transparent;
-    border-width: $thumb-width 0;
-    color: transparent;
-  }
-
-  &::-ms-fill-lower {
-    border: $track-border-width solid $track-border-color;
-    border-radius: $track-radius*2;
-  }
-
-  &::-ms-fill-upper {
-    background: $track-color;
-    border: $track-border-width solid $track-border-color;
-    border-radius: $track-radius*2;
-  }
-
-  &::-ms-thumb {
-    @include thumb();
-  }
-
-  &:focus::-ms-fill-lower {
-    background: $track-color;
-  }
-}
-
 .slider__button {
   width: 50px;
   border: none;
@@ -360,15 +274,6 @@ $track-radius: 3px;
     width: 100%;
     z-index: 1;
     right: 0;
-
-    @include tablets {
-      position: relative;
-      width: 87%;
-      z-index: 1;
-      right: 0;
-      // background: linear-gradient($color-title-light 36.5%, $color-bg-example 29.5% 100%); скрыть кота
-      // margin: 0 auto;
-    }
 
     @include desktop {
       width: 59%;

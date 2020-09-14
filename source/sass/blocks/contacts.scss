@@ -7,13 +7,29 @@
 
   @include tablets {
     padding-bottom: 20px;
-    padding-top: 25px;
+    padding-top: 26px;
   }
 
   @include desktop {
     max-width: $desktop-width;
     margin: 0 auto;
     padding: 0;
+  }
+
+  &--catalog {
+    background-color: $color-bg;
+
+    @include desktop {
+      background-color: $color-title-light;
+    }
+  }
+
+  &--form {
+    background-color: $color-bg;
+
+    @include desktop {
+      background-color: $color-title-light;
+    }
   }
 }
 
@@ -26,7 +42,7 @@
   @include tablets {
 
     justify-content: space-between;
-    padding: 5px 41px 43px 41px;
+    padding: 36px 41px 43px 41px;
   }
 
   @include desktop {

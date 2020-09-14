@@ -2,7 +2,7 @@
   background-color: $color-bg;
 }
 
-.choose_wrapper {
+.choose__wrapper {
   position: relative;
 
   @include tablets {
@@ -148,6 +148,7 @@
     padding-bottom: 31px;
     padding-top: 0;
     border: none;
+    width: 373px;
 
     @include text(16px, 24px);
 
@@ -159,6 +160,7 @@
   @include desktop {
     padding-top: 49px;
     padding-bottom: 26px;
+    width: 477px;
   }
 }
 

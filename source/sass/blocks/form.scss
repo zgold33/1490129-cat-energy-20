@@ -1,6 +1,6 @@
 .form {
   @include tablets {
-    padding-bottom: 104px;
+    padding-bottom: 73px;
   }
 
   @include desktop {
@@ -11,7 +11,7 @@
 .form__grid {
   margin: 0 0 41px 0;
 
-  &--position--row {
+  &--position-row {
     margin-bottom: 28px;
   }
 
@@ -19,7 +19,7 @@
     padding: 0 0 0 0;
     margin: 0 0 20px 0;
 
-    &--position--row {
+    &--position-row {
       margin-bottom: 0;
     }
   }
@@ -38,7 +38,7 @@
   padding: 0;
   margin: 0;
 
-  &--style--line {
+  &--style-line {
     border-bottom: 1px solid $color-border;
     border-top: 1px solid $color-border;
     padding: 20px 0 22px 0;
@@ -57,7 +57,7 @@
     }
   }
 
-  &--position--row {
+  &--position-row {
     @include desktop {
       grid-column: span 2;
       margin: 0 2px 0 0;
@@ -79,7 +79,7 @@
   @include desktop {
     max-width: $desktop-width;
     margin: 0 auto;
-    padding: 0;
+    padding: 0 0 0 0px;
   }
 
   &--cat {
@@ -100,14 +100,14 @@
       grid-template-columns: 1fr 1fr;
       grid-column-gap: 60px;
       grid-row-gap: 32px;
-      margin-bottom: 53px;
+      margin-bottom: 47px;
     }
 
     @include desktop {
       grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-column-gap: 80px;
       margin-top: 5px;
-      margin-bottom: 59px;
+      margin-bottom: 54px;
     }
   }
 
@@ -127,12 +127,12 @@
       border: 1px solid $color-border;
       margin: 0 68px 75px 71px;
       grid-row-gap: 13px;
-      padding: 25px 25px 25px 26px;
+      padding: 25px 25px 31px 26px;
     }
 
     @include desktop {
-      margin: 0 40px 0 0;
-      padding: 25px 25px 22px 26px;
+      margin: 0 0 0 0;
+      padding: 25px 0px 27px 26px;
     }
   }
 
@@ -201,7 +201,7 @@
     }
   }
 
-  &--style--check {
+  &--style-check {
     padding: 4px 0 5px 45px;
     color: $color-title-dark;
 
@@ -215,7 +215,7 @@
     }
 
     @include tablets {
-      padding: 1px 0 6px 59px;   // квадрат чекбокса десктоп
+      padding: 1px 0 10px 59px;   // квадрат чекбокса десктоп
 
       &::before {
         @include pseudo;
@@ -228,7 +228,7 @@
     }
   }
 
-  &--style--radio {
+  &--style-radio {
     padding: 5px 5px 5px 45px;
 
     color: $color-card-title;
@@ -244,7 +244,7 @@
     }
 
     @include tablets {
-      padding: 5px 10px 5px 61px;
+      padding: 8px 10px 0 61px;
 
       &::before {
         @include pseudo;
@@ -263,7 +263,11 @@
   padding: 13px 10px 10px 14px;
   flex-grow: 1;
 
-  &--theme--light {
+  &[type="number"] {
+    appearance: textfield;
+  }
+
+  &--theme-light {
     border: 1px solid $color-border;
 
     &:hover {
@@ -273,12 +277,6 @@
 
   &--contacts {
     border: 1px solid $color-border-hover;
-    // margin-right: -18px;
-    max-width: 203px;
-
-    &--email {
-      max-width: 220px;
-    }
   }
 
   &--contacts:active {
@@ -290,7 +288,7 @@
     fill: $color-button;
   }
 
-  &--theme--light:focus:invalid {
+  &--theme-light:focus:invalid {
     outline: none;
     border-color: $color-border-error;
   }
@@ -310,11 +308,7 @@
 
     &--contacts {
       padding: 12px 8px 8px 18px;
-      max-width: 550px;
-
-      &--email {
-        max-width: 580px;
-      }
+      // max-width: 550px;
     }
   }
 
@@ -354,7 +348,7 @@
     border-color: $color-border-active;
   }
 
-  &--style--radio {
+  &--style-radio {
     position: absolute;
     clip: rect(1px, 1px, 1px, 1px);
     padding: 0;
@@ -364,13 +358,12 @@
     overflow: hidden;
   }
 
-
-  &--style--radio:hover:not(:disabled) + .form__label--style--radio::before,
-  &--style--radio:focus:not(:disabled) + .form__label--style--radio::before {
+  &--style-radio:hover:not(:disabled) + .form__label--style-radio::before,
+  &--style-radio:focus:not(:disabled) + .form__label--style-radio::before {
     border: 1px solid $color-checkbox-active;
   }
 
-  &--style--radio:checked:not(:disabled) + .form__label--style--radio::after {
+  &--style-radio:checked:not(:disabled) + .form__label--style-radio::after {
     @include pseudo;
     width: 13.5px;
     height: 13.5px;
@@ -380,16 +373,16 @@
     border-radius: 50%;
   }
 
-  &--style--radio:active + .form__label--style--radio {
+  &--style-radio:active + .form__label--style-radio {
     opacity: 0.3;
   }
 
-  &--style--radio:disabled + .form__label--style--radio {
+  &--style-radio:disabled + .form__label--style-radio {
     opacity: 0.3;
   }
 
   @include tablets {
-    &--style--radio:checked:not(:disabled) + .form__label--style--radio::after {
+    &--style-radio:checked:not(:disabled) + .form__label--style-radio::after {
       @include pseudo;
       width: 18px;
       height: 18px;
@@ -400,7 +393,7 @@
     }
   }
 
-  &--style--check {
+  &--style-check {
     position: absolute;
     clip: rect(1px, 1px, 1px, 1px);
     padding: 0;
@@ -410,12 +403,12 @@
     overflow: hidden;
   }
 
-  &--style--check:hover:not(:disabled) + .form__label--style--check::before,
-  &--style--check:focus:not(:disabled) + .form__label--style--check::before {
+  &--style-check:hover:not(:disabled) + .form__label--style-check::before,
+  &--style-check:focus:not(:disabled) + .form__label--style-check::before {
     border: 1px solid $color-checkbox-active;
   }
 
-  &--style--check:checked + .form__label--style--check::after {
+  &--style-check:checked + .form__label--style-check::after {
     @include pseudo;
     width: 18px;
     height: 14px;
@@ -424,16 +417,16 @@
     background-image: url("../img/check.svg");
   }
 
-  &--style--check:active + .form__label--style--check {
+  &--style-check:active + .form__label--style-check {
     opacity: 0.3;
   }
 
-  &--style--check:disabled + .form__label--style--check {
+  &--style-check:disabled + .form__label--style-check {
     opacity: 0.3;
   }
 
   @include tablets {
-    &--style--check:checked + .form__label--style--check::after {
+    &--style-check:checked + .form__label--style-check::after {
       @include pseudo;
       width: 18px;
       height: 14px;

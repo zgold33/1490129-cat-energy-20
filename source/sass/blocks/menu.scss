@@ -100,14 +100,14 @@
     }
   }
 
-  &--style--light {
+  &--style-light {
     @include desktop {
       color: $color-title-light;
     }
   }
 
   @include desktop {
-    &--active.menu__link--style--light {
+    &--active.menu__link--style-light {
       &::after {
         content: "";
         position: absolute;

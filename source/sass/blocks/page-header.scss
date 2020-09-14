@@ -19,7 +19,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: $color-title-light;
-  margin-bottom: 12px;
+  padding-bottom: 12px;
   padding-left: 20px;
   padding-right: 20px;
 
@@ -53,6 +53,22 @@
     background-size: cover;
     z-index: -1;
 
+    @media (min-resolution: 2dppx) {
+      position: absolute;
+      display: block;
+      // top: 123%;
+      top: 100%;
+      right: 0;
+      width: 100%;
+      min-height: 305px;
+      background: url("../img/index-background-mobile@2x.jpg");
+      background-repeat: no-repeat;
+      background-color: $color-button;
+      background-position: center;
+      background-size: cover;
+      z-index: -1;
+    }
+
     @include tablets {
       display: none;
     }
@@ -68,6 +84,18 @@
       width: 50%;
       min-height: 694px;
       z-index: -1;
+
+      @media (min-resolution: 2dppx) {
+        position: absolute;
+        display: block;
+        background-image: url("../img/index-background-desktop@2x.jpg");
+        background-repeat: no-repeat;
+        background-color: $color-button;
+        top: 0;
+        width: 50%;
+        min-height: 694px;
+        z-index: -1;
+      }
     }
   }
 }

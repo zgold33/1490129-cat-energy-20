@@ -11,6 +11,11 @@
     margin-right: 28px;
     margin-left: 60px;
   }
+
+  @include desktop {
+    padding-top: 6px;
+    padding-left: 24px;
+  }
 }
 
 .social__item {
@@ -18,6 +23,10 @@
 
   &:last-child {
     margin-right: 3px;
+
+    @include desktop {
+      transform: translateY(-23%);
+    }
   }
 
   @include tablets {
